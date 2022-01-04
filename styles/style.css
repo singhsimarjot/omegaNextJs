@@ -1,0 +1,194 @@
+body{
+    font-family: 'Circular Std', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #19191B;
+}
+
+.container{
+    font-size: 18px;
+}
+.text-white{
+    color: #FFFFFF;
+   
+}
+.form-select-lg{
+    font-size: 18px;
+    padding: 1rem 0.75rem;
+}
+.titlepart{
+font-size: 40px;
+}
+.text-white-secondary{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+}
+.text-primary{
+    color: #F04037!important;
+}
+.btn-primary{
+background: #F04037;
+border: 1px solid #C31A12;
+border-radius: 10px;
+
+}
+.form-floating{
+font-size: 18px;
+}
+.form-floating>.form-control {
+    padding: 2rem 0.75rem;
+}
+
+form {
+    padding: 80px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.bg-image{
+    position: relative;
+}
+.bg-secondimg {
+    position:absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+.bg-secondimg img{
+    max-width: 100%;
+}
+
+
+.mw-380{
+    max-width: 380px;
+}
+.titlesection h1{
+    font-size: 25px;
+}
+.titlesection p{
+    font-size: 18px;
+}
+.padd{
+    padding-bottom: 0 !important;
+}
+
+.bg-imagehalf{
+position: absolute;
+top: -69px;
+left: 0;
+}
+.bg-imageretange{
+    text-align: center;
+    width: 100%;
+    
+   
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.feature p{
+    font-size: 18px;
+}
+.oval{position: absolute;
+    left: -8px;
+    top: -42px;
+    opacity: 0.3;
+}
+
+
+.custom{
+    font-size: 18px;
+}
+.backend{
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E20;
+}
+
+
+/* .move{
+    position: absolute;
+    top: 307px;
+    left: 420px;
+} */
+
+.sizefont{
+    font-size: 18px;
+    color:rgba(255, 255, 255, 0.7);
+}
+.h6{
+    color:rgba(255, 255, 255, 0.7);
+
+}
+.changer{
+    color: #F04037;
+}
+.newtexts{
+    font-size: 18px;
+}
+.newtext{
+    font-size: 50px;
+}
+.newtext1{
+    font-size: 18px;
+}
+.backend1{
+    
+    background: url("../public/images/Oval\ circled.svg") no-repeat   #1E1E20;
+    background-position: 110% 0%;
+    background-size: contain
+}
+.demo{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+}
+.demo img{
+    width: 125px;
+}
+.buton{
+    text-align: center;
+}
+.finish{
+font-size: 40px;
+}
+
+.backend2{
+    margin: 0;
+    padding: 0;
+    background-color: #19191B;
+    }
+
+.offwhite{
+    color:rgba(255, 255, 255, 0.7);
+}
+.compress{
+    border: 0.1px solid #1d1d1d!important;
+}
+.space{
+    padding: 60px;
+}
+@media screen and (min-width: 1024px) {
+    .titlepart{
+        font-size: 80px;
+        }
+        
+        .titlesection h1{
+            font-size: 50px;
+  }
+  .finish{
+    font-size: 40px;
+    }
+
+    
+}
+@media screen and (min-width: 575px) {
+.mobilecenter{
+    text-align: center;
+}  
+
+}
