@@ -1,3 +1,4 @@
+import Link from "next/link"
 const Footer = () => {
     return (
         <footer>
@@ -12,19 +13,19 @@ const Footer = () => {
                         </a>
 
                         <ul className="nav  justify-content-center mb-md-0 offwhite">
-                            <li className="me-4 "><a href="#" className="nav-link px-2 link-secondary fs-6 offwhite">Support</a></li>
-                            <li className="me-4 "><a href="#" className="nav-link px-2 link-dark fs-6 text-white-secondary">Privacy Policy
-                            </a></li>
-                            <li className="me-4 "><a href="#" className="nav-link px-2 link-dark fs-6 text-white-secondary">Terms and
-                                Conditions</a></li>
-                            <li><a href="#" className="nav-link px-2 link-dark fs-6 text-white-secondary">© 2020 UXTheme, All Rights
-                                Reserved</a></li>
+                            <li className="me-4 "><Link href="/support"><a className="nav-link px-2 link-secondary fs-6 offwhite">Support</a></Link></li>
+                            <li className="me-4 "><Link href="/policy"><a className="nav-link px-2 link-dark fs-6 text-white-secondary">Privacy Policy
+                            </a></Link></li>
+                            <li className="me-4 "><Link href="/conditions"><a className="nav-link px-2 link-dark fs-6 text-white-secondary">Terms and
+                                Conditions</a></Link></li>
+                            <li><Link href="/theme"><a className="nav-link px-2 link-dark fs-6 text-white-secondary">© 2020 UXTheme, All Rights
+                                Reserved</a></Link></li>
 
                         </ul>
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     )
 }
 

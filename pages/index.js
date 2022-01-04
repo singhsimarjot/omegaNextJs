@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 export default function Home() {
@@ -26,7 +25,7 @@ export default function Home() {
             </div>
             <div className="mx-auto col-md-6  position-relative">
               <div className="bg-secondimg">
-                <img src="./images/Group 1.svg" alt="Group Image" />
+                <img src="/images/Group 1.svg" alt="Group Image" />
               </div>
               <form className="border rounded-3 bg-light mw-380 mx-auto pt-5 pb-5 adjust">
                 <div className="form-floating mb-3">
@@ -52,7 +51,7 @@ export default function Home() {
                   aria-label=".form-select-lg example"
                   defaultValue=""
                 >
-                  <option value={0} disabled>Company size</option>
+                  <option value={0} >Company size</option>
                   <option value={1}>One</option>
                   <option value={2}>Two</option>
                   <option value={3}>Three</option>
@@ -62,7 +61,7 @@ export default function Home() {
                   aria-label=".form-select-lg example"
                   defaultValue=""
                 >
-                  <option value={0} disabled>Yearly budget</option>
+                  <option value={0} >Yearly budget</option>
                   <option value={1}>20 lakh</option>
                   <option value={2}>50 lakh</option>
                   <option value={3}>1 Crore</option>
@@ -77,7 +76,7 @@ export default function Home() {
       </section>
       <section className="position-relative">
         <div className="bg-imagehalf">
-          <img src="./images/half circle.svg" alt="cicrle-image" />
+          <img src="/images/half circle.svg" alt="cicrle-image" />
         </div>
         <div className="container px-4 py-5 text-center position-relative">
           <div className="row align-items-center g-lg-5 py-5 padd">
@@ -95,7 +94,7 @@ export default function Home() {
         <div className="container px-4">
           <div className="col-md-12">
             <div className="bg-imageretange">
-              <img src="./images/computer.png" alt="computer" className="img-fluid" />
+              <img src="/images/computer.png" alt="computer" className="img-fluid" layout='fill' />
             </div>
           </div>
         </div>
@@ -250,7 +249,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto col-md-6" style={{ position: "relative" }}>
-              <div className="bg-image">
+              <div className="bg-image bg-image pt-5 pt-lg-0">
                 <img src="./images/Ovaldouble.svg" alt="oval-double" className="img-fluid" />
               </div>
             </div>
