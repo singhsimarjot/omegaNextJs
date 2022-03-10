@@ -1,0 +1,78 @@
+{
+  "imageGallery": [
+    {
+      "containerClass": "",
+      "image": "./images/extract-new.png",
+      "imgClass": "img-fluid p-4 px-5 m-auto setImage"
+    },
+    {
+      "containerClass": "",
+      "image": "./images/google-partner-logo.png",
+      "imgClass": "img-fluid p-4 px-5 m-auto setImage"
+    },
+    {
+      "containerClass": "",
+      "image": "./images/ibm-partner-logo.png",
+      "imgClass": "img-fluid p-4 px-5 m-auto setImage"
+    },
+    {
+      "containerClass": "",
+      "image": "./images/ISO-9001-logo-new.png",
+      "imgClass": "img-fluid p-4 px-5 m-auto setImage"
+    },
+    {
+      "containerClass": "",
+      "image": "./images/MCSD-logo.png",
+      "imgClass": "img-fluid p-4 px-5 m-auto setImage"
+    },
+    {
+      "containerClass": "",
+      "image": "./images/ms-gold-partner.png",
+      "imgClass": "img-fluid p-4 px-5 m-auto setImage"
+    },
+    {
+      "containerClass": "",
+      "image": "./images/OCJP.png",
+      "imgClass": "img-fluid p-4 px-5 m-auto setImage"
+    }
+  ],
+  "settings": {
+    "dots": true,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 3,
+    "slidesToScroll": 1
+  },
+  "serviceGallery": [
+    {
+      "image": "./images/ap1.png"
+    },
+    {
+      "image": "./images/ap2.png"
+    },
+    {
+      "image": "./images/ap1.png"
+    },
+
+    {
+      "image": "./images/ap2.png"
+    },
+    {
+      "image": "./images/ap1.png"
+    },
+
+    {
+      "image": "./images/ap2.png"
+    },
+    {
+      "image": "./images/ap1.png"
+    },
+    {
+      "image": "./images/ap2.png"
+    },
+    {
+      "image": "./images/ap1.png"
+    }
+
+  ]
+}
