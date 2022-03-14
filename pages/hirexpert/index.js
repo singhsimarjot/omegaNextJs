@@ -43,7 +43,7 @@ const HireExpert = () => {
                   Industry Unique Performance Guarantee
                 </li>
                 <li className="lh-lg">
-                  <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
+                  <i className="fa fa-check-square-o" aria-hidden="true"></i>
                   Hundreds of developers, designers and project managers at your
                   service
                 </li>
