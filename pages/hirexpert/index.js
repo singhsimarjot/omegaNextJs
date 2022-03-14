@@ -35,11 +35,11 @@ const HireExpert = () => {
               </p>
               <ul className="text-white list-inline p-0 mb-5">
                 <li className="lh-lg">
-                  <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
+                  <i className="fa fa-check-square-o" aria-hidden="true"></i>
                   Customer Focused Development
                 </li>
                 <li className="lh-lg">
-                  <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
+                  <i className="fa fa-check-square-o" aria-hidden="true"></i>
                   Industry Unique Performance Guarantee
                 </li>
                 <li className="lh-lg">
