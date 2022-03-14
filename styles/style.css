@@ -19,6 +19,44 @@ body{
 .titlepart{
 font-size: 40px;
 }
+.guranteeText{
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: 600;
+    border-top: 1px inset;
+}
+.BgBlue{
+    background-color: #1E1E20;
+}
+.BgBlue .feature-icon img{
+    /* width: 330px;  */
+}
+.BgBlue .feature-icon h2{
+    font-weight: 600;
+}
+.Coexperience {
+    color: #fff;
+    font-weight: 500;
+    background: url(https://programmers.io/wp-content/uploads/2020/11/who-we-are-cbg.png) no-repeat center center;
+    display: inline-block;
+    margin: 0;
+}
+.Coexperience li {
+    font-size: 38px;
+    line-height: 36px;
+    width: 48%;
+    float: left;
+    margin-bottom: 35px;
+    text-align: center;
+    padding-top: 40px;
+}
+.Coexperience li div {
+    font-size: 18px;
+}
+
+.bg-imageretange{
+ padding-bottom: 90px;
+}
 .text-white-secondary{
     color: rgba(255, 255, 255, 0.7);
     font-size: 25px;
@@ -56,10 +94,20 @@ form {
     top: 0;
     text-align: center;
 }
+.form-secondimg {
+    position:absolute;
+    z-index: 0;
+    right: 0;
+    top: 5%;
+    left: 0;
+    text-align: center;
+}
 .bg-secondimg img{
     max-width: 100%;
 }
-
+.hoverText li a:hover{
+    color: #f04037;
+}
 
 .mw-380{
     max-width: 380px;
@@ -172,6 +220,232 @@ font-size: 40px;
 .space{
     padding: 60px;
 }
+.titleCard{
+    background: #f3f3f3;
+    font-weight: 600;
+}
+.companyCards{
+    background-color: #262626;
+}
+.cardText{
+    min-height: 330px;
+    border-radius: 5px;
+}
+.happyclients h3 b{
+    color: #fedc5a;
+}
+.happyclients h3 i{
+    font-size: 15px;
+}
+.btncenter{
+    margin: 0 auto;
+    display: block;
+}
+.setImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 0 5px;
+    height: 120px;
+}
+.counter-count
+{
+    font-size: 20px;
+    background-color: #4185f4;
+    border-radius: 50%;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    line-height: 92px;
+    width: 92px;
+    height: 92px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+}
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 24px;
+    color: #000000;
+    line-height: 34px;
+}
+.footerNavs li a:hover{
+    color: #f04037;
+}
+
+/* tabs-css-cards */
+
+.tabs {
+    margin: 0 auto;
+    width: 100%; 
+    color: #000; 
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: center;
+  }
+  .tabs label {
+    order: 1; /* Put labels first */
+    display: block;
+    padding: 8px 15px;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background ease 0.3s;
+  }
+  
+  .tabs label {
+    color: #fff;
+    background-color: transparent;
+  }
+  .tabs label:hover {
+    color: #f04037;
+  }
+  
+  .tabs .tab {
+    order: 99; /* Put tabs last*/
+    flex-grow: 1;
+    width: 100%;
+    display: block; /* HIDES unselected tab content with "none" */
+    position: absolute;
+    right: 5000px; /* move everything to the right to hide the content (not selected) */
+    padding: 1rem;
+    background: transparent; /* color of tab content */
+    color: #fff;
+    
+  }
+  
+  .tabs input[type="radio"] {
+    display: none; /* hides circles of radio style */
+  }
+  
+  .tabs input[type="radio"]:checked + label {
+ /* color of selected tab */
+    color: #f04037;
+  }
+  
+  .tabs input[type="radio"]:checked + label + .tab {
+    display: block; /* SHOWS selected tab */
+    position: relative;
+    right: 0px;
+    /* transition: .3s ease; */
+  }
+  .servicesBusiness .icon-text img{
+      width: 100px;
+  }
+
+
+
+  /* ClientsExperiences border animation css */
+  
+.draw-border{
+    --uiButtonTextColor: #000;
+    --uiButtonBorderWidth: var(--buttonBorderWidth, 4px);
+    --uiButtonBorderColor: var(--buttonBorderColor);
+    --uiButtonHoverTextColor: var(--buttonHoverTextColor);
+    --uiButtonHoverBorderColor: #5656d5;
+    
+    box-shadow: inset 0 0 0 var(--uiButtonBorderWidth) var(--uiButtonBorderColor);
+    color: var(--uiButtonTextColor);
+    transition: color .25s .08333333s;
+    position: relative;
+  }
+  
+  .draw-border::before,
+  .draw-border::after{
+    content: '';  
+  
+      box-sizing: border-box;	
+    width: 0;
+    height: 0;
+      border: 0 solid var(--uiButtonBorderColor);
+      
+      pointer-events: none;
+      transition-property: border-color, width, height;
+      transition-duration: .25s; /* .25s for border-color, .25s for width, .25s for height */
+      
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .draw-border::before{
+    border-bottom-width: var(--uiButtonBorderWidth);
+    border-left-width: var(--uiButtonBorderWidth);
+      /* A bottom border of button have to be hidden through 0.25s so I use the 0.25s value as the second argument */
+    transition-delay: .35s, .25s, 0s; /* .35s for border-color, .25s for width, 0s for height */
+  }
+  
+  .draw-border::after{
+    border-top-width: var(--uiButtonBorderWidth);
+    border-right-width: var(--uiButtonBorderWidth);
+      /* A right border of button have to be hidden through 0.25s so I use the 0.25s value as the third argument */
+    transition-delay: .35s, 0s, .25s; /* .35s for border-color, 0s for width, .25s for height */
+  }
+  
+  .draw-border:hover{
+    color: #936e55;
+  }
+  
+  .draw-border:hover::before, 
+  .draw-border:hover::after{
+    width: 100%;
+    height: 100%;
+    border-color: var(--uiButtonHoverBorderColor);
+      
+      /* Changing border color don't have to be smooth so I use the 0s value as the first argument */
+      transition-duration: 0s, .25s, .25s; /* 0s for border-color, .25s for width, .25s for height */
+  }
+  
+  .draw-border:hover::before{
+      /* A left border of button have to be showed through 0.25s so I use the 0.25s value as the third argument */
+      transition-delay: 0s, 0s, .25s; /* 0s for border-color, 0s for width, .25s for height */
+  }
+  
+  .draw-border:hover::after{
+      /* A top border of button have to be showed through 0.25s so I use the 0.25s value as the second argument */
+    transition-delay: 0s, .25s, 0s; /* 0s for border-color, .25s for width, 0s for height */
+  }
+  body {
+    --buttonTextColor: #58afd1;
+    --buttonBorderColor: #58afd1;
+    --buttonBorderWidth: 4px;
+    --buttonHoverTextColor: #ffe593;
+    --buttonHoverBorderColor: #ffe593;
+  }
+
+/* ClientsExperiences border animation end css */
+
+
+
+
+
+  
+  @media (max-width: 45em) {
+    .tabs .tab,
+    .tabs label {
+      order: initial;
+    }
+    .tabs label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 1024px) {
     .titlepart{
         font-size: 80px;
