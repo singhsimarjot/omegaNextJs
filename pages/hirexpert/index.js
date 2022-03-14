@@ -30,7 +30,7 @@ const HireExpert = () => {
                 Programming With No Delays
               </h1>
               <p className="mb-3 text-white guranteeText">
-                We guarantee you'll be happy after 30 days or we won't invoice
+                We guarantee you&apos;ll be happy after 30 days or we won&apos;t invoice
                 you
               </p>
               <ul className="text-white list-inline p-0 mb-5">
