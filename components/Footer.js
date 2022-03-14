@@ -12,14 +12,14 @@ const Footer = () => {
                                 Omega
                             </a>
                         </Link>
-                        <ul className="nav  justify-content-center mb-md-0 offwhite">
+                        <ul className="nav footerNavs justify-content-center mb-md-0 offwhite">
                             <li className="me-4 "><Link href="/support"><a className="nav-link px-2 link-secondary fs-6 offwhite">Support</a></Link></li>
                             <li className="me-4 "><Link href="/policy"><a className="nav-link px-2 link-dark fs-6 text-white-secondary">Privacy Policy
                             </a></Link></li>
                             <li className="me-4 "><Link href="/conditions"><a className="nav-link px-2 link-dark fs-6 text-white-secondary">Terms and
                                 Conditions</a></Link></li>
-                            <li><Link href="/theme"><a className="nav-link px-2 link-dark fs-6 text-white-secondary">© 2020 UXTheme, All Rights
-                                Reserved</a></Link></li>
+                            <li><p className="nav-link px-2 link-dark fs-6 text-white">© 2020 UXTheme, All Rights
+                                Reserved</p></li>
 
                         </ul>
                     </div>
@@ -27,6 +27,9 @@ const Footer = () => {
             </div>
         </footer >
     )
+    
 }
+
+
 
 export default Footer

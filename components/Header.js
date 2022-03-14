@@ -19,7 +19,7 @@ const Header = () => {
                     </Link>
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 hoverText">
                         <li>
-                            <Link href="/hire-expert">
+                            <Link href="/hirexpert">
                                 <a
 
                                     className="nav-link px-2 link-secondary text-primary fs-6"
