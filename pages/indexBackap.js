@@ -231,7 +231,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <div class="black border"></div> */}
+      {/* <div className="black border"></div> */}
       <section>
         <div className="container px-4 py-5">
           <div className="row align-items-center g-lg-5 py-lg-5">
@@ -336,7 +336,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          {/* <div class="black border"></div> */}
+          {/* <div className="black border"></div> */}
           <section>
             <div className="backend1 position-relative ">
               <div className="bg-image demo">

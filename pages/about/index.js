@@ -20,7 +20,6 @@ const About = () => {
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossOrigin="anonymous"
         ></link>
-        <Script>console.log("working")</Script>
       </Head>
       <Header />
 
@@ -94,7 +93,7 @@ const About = () => {
               <div className="AboutExplan py-5">
                 <h3 className="text-white mb-3">
                   <span className="yellowColor">Reimagining</span> <br></br>
-                  'what's next'
+                  &apos;what&apos;s next&apos;
                 </h3>
                 <p className="text-white lh-base">
                   We bring together exceptional talent in technology, design,
@@ -168,7 +167,7 @@ const About = () => {
                 <div className="timeline-container">
                   <div className="timeline-end">
                     <p>
-                      <i class="fas fa-key"></i>
+                      <i className="fas fa-key"></i>
                     </p>
                   </div>
                   <div className="timeline-continue">
@@ -181,7 +180,7 @@ const About = () => {
                       <div className="col-md-6">
                         <div className="timeline-box">
                           <div className="timeline-icon">
-                            <i class="fas fa-user-friends"></i>
+                            <i className="fas fa-user-friends"></i>
                           </div>
                           <div className="timeline-text">
                             <h3 className="fs-3">100+ Experienced Team</h3>
@@ -211,7 +210,7 @@ const About = () => {
                             </p>
                           </div>
                           <div className="timeline-icon d-md-block d-none">
-                            <i class="fas fa-smile"></i>
+                            <i className="fas fa-smile"></i>
                           </div>
                         </div>
                       </div>
@@ -226,7 +225,7 @@ const About = () => {
                       <div className="col-12">
                         <div className="timeline-year">
                           <p>
-                            <i class="fas fa-key"></i>
+                            <i className="fas fa-key"></i>
                           </p>
                         </div>
                       </div>
@@ -241,7 +240,7 @@ const About = () => {
                       <div className="col-md-6">
                         <div className="timeline-box">
                           <div className="timeline-icon">
-                            <i class="fab fa-internet-explorer"></i>
+                            <i className="fab fa-internet-explorer"></i>
                           </div>
                           <div className="timeline-text">
                             <h3 className="fs-3">10+ Years of Experience.</h3>
@@ -271,7 +270,7 @@ const About = () => {
                             </p>
                           </div>
                           <div className="timeline-icon d-md-block d-none">
-                            <i class="fas fa-check-circle"></i>
+                            <i className="fas fa-check-circle"></i>
                           </div>
                         </div>
                       </div>
@@ -291,7 +290,7 @@ const About = () => {
                       <div className="col-md-6">
                         <div className="timeline-box">
                           <div className="timeline-icon">
-                            <i class="fas fa-industry"></i>
+                            <i className="fas fa-industry"></i>
                           </div>
                           <div className="timeline-text">
                             <h3 className="fs-3">50+ Industries serve.</h3>
@@ -305,7 +304,7 @@ const About = () => {
                   </div>
                   <div className="timeline-start">
                     <p>
-                      <i class="fas fa-key"></i>
+                      <i className="fas fa-key"></i>
                     </p>
                   </div>
                   <div className="timeline-launch">
@@ -338,7 +337,7 @@ const About = () => {
               <Testimonial 
               settings={Data.testimonialsSettings}
               data={Data.testimonials}
-              containerClass="testimonials-wrapper text-white text-opacity-75 lh-lg text-center"
+              containerclassName="testimonials-wrapper text-white text-opacity-75 lh-lg text-center"
               usernameWrapper="testimonialUser yellowColor fs-6 text-center"
               />
             </div>

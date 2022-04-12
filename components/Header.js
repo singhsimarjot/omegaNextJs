@@ -25,7 +25,7 @@ const Header = () => {
                     </Link>
 
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 hoverText">
-                    <li><a href="#" className="cross-responsive" aria-label="Close Navigation"><i class="fa fa-times"></i></a></li>
+                    <li><a href="#" className="cross-responsive" aria-label="Close Navigation"><i className="fa fa-times"></i></a></li>
                         <li className="nav-item">
                             <Link href="/">
                                 <a
@@ -66,7 +66,7 @@ const Header = () => {
                             </Link>
                         </li>
                     </ul>
-                    <a href="#nav" class="nav-btn" aria-label="Open Navigation"><i class="fa fa-bars"></i></a>
+                    <a href="#nav" className="nav-btn" aria-label="Open Navigation"><i className="fa fa-bars"></i></a>
                     <div className="col-md-3 text-end colResp">
                         <button type="button" className="btn btn-primary me-2 rounded-2" href="tel:800-600-5822">
                         <i className="fa fa-phone" aria-hidden="true"></i> 800-600-5822

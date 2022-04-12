@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./../components/Header";
 import Head from "next/head";
+import Link from 'next/link'
 import Footer from "./../components/Footer";
 import SliderCarousel from "./../components/Slider";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
@@ -57,12 +58,16 @@ const HireExpert = () => {
                   service
                 </li>
               </ul>
+              <Link
+              href="/inquiry"
+              >
               <a
-                href="/inquiry"
+             
                 className="btn-primary p-3 text-decoration-none px-5"
               >
                 Get Started
               </a>
+              </Link>
             </div>
             <div className="mx-auto col-md-6  position-relative R-Top">
               <div className="bg-secondimg">
@@ -478,7 +483,7 @@ const HireExpert = () => {
         <div className="companyCards spacers">
           <div className="container">
             <h2 className="secondary-title fw-bold text-center text-white">
-              Let's Work Together
+              Let`&apos;s Work Together
             </h2>
             <p className="text-white text-opacity-50 text-center mb-5">
               We’re passionate about brilliant ideas and the execution that
@@ -490,7 +495,7 @@ const HireExpert = () => {
                 <div className="col-lg-4">
                   <div className="iconWork d-flex">
                     <div className="me-3">
-                      <i class="fas fa-chalkboard-teacher"></i>
+                      <i className="fas fa-chalkboard-teacher"></i>
                     </div>
                     <div>
                       <h3 className="text-white fw-bold fs-4">WE DISCUSS</h3>
@@ -505,7 +510,7 @@ const HireExpert = () => {
                 <div className="col-lg-4">
                   <div className="iconWork d-flex">
                     <div className="me-3">
-                      <i class="fas fa-paper-plane"></i>
+                      <i className="fas fa-paper-plane"></i>
                     </div>
                     <div>
                       <h3 className="text-white fw-bold fs-4">WE DEVELOP</h3>
@@ -519,7 +524,7 @@ const HireExpert = () => {
                 <div className="col-lg-4">
                   <div className="iconWork d-flex">
                     <div className="me-3">
-                      <i class="fas fa-paste"></i>
+                      <i className="fas fa-paste"></i>
                     </div>
                     <div>
                       <h3 className="text-white fw-bold fs-4">WE DELIVER</h3>

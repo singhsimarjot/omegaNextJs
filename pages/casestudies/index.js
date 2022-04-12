@@ -21,7 +21,7 @@ const CaseStudies = () => {
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossOrigin="anonymous"
         ></link>
-        <Script>console.log("working")</Script>
+        
       </Head>
       <Header />
 
@@ -102,7 +102,7 @@ const CaseStudies = () => {
       <section className="spacers">
         <div className="container">
           <div>
-            <h3 className="text-white my-4">All Case Studies <i class="fas fa-arrow-down"></i></h3>
+            <h3 className="text-white my-4">All Case Studies <i className="fas fa-arrow-down"></i></h3>
           </div>
           <div className="row g-0">
             <div className="col-lg-6 caseStudy-Bg">
@@ -219,7 +219,7 @@ const CaseStudies = () => {
                 </div>
                 <div className="ecommerce-content w-75 py-4">
                   <h3 className="text-white">
-                    eCommerce Design & Brand Refresh for one of the world's
+                    eCommerce Design & Brand Refresh for one of the world&lsquo;s
                     largest publisher
                   </h3>
                   <p className="text-white">
