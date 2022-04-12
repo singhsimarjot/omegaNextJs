@@ -374,5 +374,28 @@
     "image": "./images/VerticalValues-e1586416878909.webp"
   }
 
+],
+"testimonialsSettings": {
+  "dots": true,
+  "infinite": true,
+  "slidesToShow": 1,
+  "arrows":false,
+  "autoplay":true,
+  "autoplaySpeed":3000
+  
+},
+"testimonials":[
+  {
+    "description":"Working with omeg team has been a pleasure. They have consistently delivered excellent work quality and even contributed to the project with ideas that we have implemented! Highly recommended and we would definitely use again.",
+    "name":"User1"
+  },
+  {
+    "description":"The best choice if you want a custom-built php cross-browser site. omeg is very good in making custom php websites and he is very nice to work with. You can trust omeg to do is best and help you all the way through with great support, availability, communication and cooperation. This team from India is a great choice. Very committed and trustworthy.",
+    "name":"User2"
+  },
+  {
+    "description":"omeg team did outstanding work and was very responsive, and was constantly available. I couldn't ask for anything more on this job. Great work all around!",
+    "name":"User3"
+  }
 ]
 }

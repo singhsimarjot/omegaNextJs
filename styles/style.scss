@@ -1,0 +1,893 @@
+@import 'partials/variables';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.btn-primary{
+  background: $primaryColor;
+  border: 1px solid $primaryColor;
+  border-radius: 10px;
+}
+body{
+    font-family: $primaryFont;
+    margin: 0;
+    padding: 0;
+    background-color: $secondaryColor;
+}
+.progress-bar{
+  div{
+    background-color: $primaryColor !important;
+  }
+}
+::-webkit-scrollbar {
+  width: 5px;
+  border: 1px solid #d5d5d5;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #eeeeee;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: $primaryColor;
+}
+.container{
+    font-size: $textFont;
+}
+.form-select-lg{
+    font-size: $textFont;
+    padding: 1rem 0.75rem;
+}
+.guranteeText{
+    font-size: 16px;
+    padding-top: 10px;
+    font-weight: 600;
+    border-top: 1px inset;
+}
+.BgBlue{
+    background-color: #1E1E20;
+}
+.BgBlue .feature-icon img{
+    /* width: 330px;  */
+}
+.BgBlue .feature-icon h2{
+    font-weight: 600;
+}
+.Coexperience {
+    color: $whiteColor;
+    font-weight: 500;
+    background: url(https://programmers.io/wp-content/uploads/2020/11/who-we-are-cbg.png) no-repeat center center;
+    display: inline-block;
+    margin: 0;
+}
+.Coexperience li {
+    font-size: 38px;
+    line-height: 36px;
+    width: 48%;
+    float: left;
+    margin-bottom: 35px;
+    text-align: center;
+    padding-top: 40px;
+}
+.Coexperience li div {
+    font-size: $textFont;
+}
+.bg-imageretange{
+ padding-bottom: 90px;
+}
+.text-white-secondary{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+}
+.text-primary{
+    color: $primaryColor !important;
+}
+.form-floating{
+font-size: $textFont;
+}
+form {
+    padding: 80px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.bg-image{
+    position: relative;
+}
+.bg-secondimg {
+    position:absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+.form-secondimg {
+    position:absolute;
+    z-index: 0;
+    right: 0;
+    top: 1%;
+    text-align: center;
+}
+.bg-secondimg img{
+    max-width: 100%;
+}
+.hoverText li a:hover{
+    color: $primaryColor;
+}
+
+.mw-380{
+    max-width: 380px;
+}
+.titlesection h1{
+    font-size: 25px;
+}
+.titlesection p{
+    font-size: $textFont;
+}
+.padd{
+    padding-bottom: 0 !important;
+}
+
+.bg-imagehalf{
+position: absolute;
+top: -69px;
+left: 0;
+}
+.bg-imageretange{
+    text-align: center;
+    width: 100%;   
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.feature p{
+    font-size: $textFont;
+}
+.oval{position: absolute;
+    left: -8px;
+    top: -42px;
+    opacity: 0.3;
+}
+.AboutInner .abouthero img{
+    width: 150px;
+}
+.abstractRight{
+    right: 385px;
+    bottom: 60px;
+}
+.custom{
+    font-size: $textFont;
+}
+.backend{
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E20;
+}
+.sizefont{
+    font-size: $textFont;
+    color:rgba(255, 255, 255, 0.7);
+}
+.h6{
+    color:rgba(255, 255, 255, 0.7);
+}
+.changer{
+    color: $primaryColor;
+}
+.newtexts{
+    font-size: $textFont;
+}
+.newtext{
+    font-size: 50px;
+}
+.newtext1{
+    font-size: $textFont;
+}
+.backend1{ 
+    background: url("../public/images/Oval\ circled.svg") no-repeat   #1E1E20;
+    background-position: 110% 0%;
+    background-size: contain
+}
+.demo{
+    position: absolute;
+    left: 0;
+    bottom: 0;   
+}
+.demo img{
+    width: 125px;
+}
+.buton{
+    text-align: center;
+}
+.finish{
+font-size: 40px;
+}
+.nav-btn{
+  display: none;
+}
+.cross-responsive{
+  display: none;
+}
+.backend2{
+    margin: 0;
+    padding: 0;
+    background-color: #19191B;
+    }
+
+.offwhite{
+    color:rgba(255, 255, 255, 0.7);
+}
+.compress{
+    border: 0.1px solid #1d1d1d!important;
+}
+.space{
+    padding: 60px;
+}
+.companyCards{
+    background-color: #111517;
+}
+.spacers{
+  padding: 80px 0;
+}
+.pattern_wrap {
+  background: #6c757d url("../public/images/circle-pattern2.png") no-repeat;
+  background-size: cover;
+  background-position: top right;
+  display: flex;
+  width: 50%;
+  position: relative;
+  border-radius: 0 0 3px 3px;
+  margin-left: auto;
+  height: 215px;
+}
+.blue_pattern{
+  background: #41479B url("../public/images/circle-pattern2.png") no-repeat;
+  background-size: cover;
+  margin-left: unset;
+}
+.mb-100{
+  margin-bottom: 128px;
+}
+.platform-Bg{
+ background-color: rgb(249, 120, 101);
+}
+.bg-blue{
+  background-color: #41479B;
+}
+.caseStudy-Bg{
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+}
+.ecommerce-Bg{
+  background:rgb(227, 27, 35);
+  padding: 50px;
+  border-radius: 3px;
+}
+.case-contents{
+  padding-top: 60px;
+}
+.caseStudy-Bg .realImpact .study-image img:not(.circle_pattern) {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 45px;
+}
+.iconWork i {
+  color: $primaryColor;
+  font-size: 60px;
+ }
+.setImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 0 5px;
+    height: 120px;
+}
+.counter-count
+{
+    font-size: 20px;
+    background-color: #4185f4;
+    border-radius: 50%;
+    position: relative;
+    color: $whiteColor;
+    text-align: center;
+    line-height: 92px;
+    width: 92px;
+    height: 92px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+}
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 24px;
+    color: #000000;
+    line-height: 34px;
+}
+.footerNavs li a:hover{
+    color: $primaryColor;
+}
+
+/* tabs-css-cards */
+
+.tabs {
+    margin: 0 auto;
+    width: 100%; 
+    color: #000; 
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: center;
+  }
+  .tabs label {
+    order: 1;
+    display: block;
+    padding: 8px 15px;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background ease 0.3s;
+  }
+  
+  .tabs label {
+    color: $whiteColor;
+    background-color: transparent;
+  }
+  .tabs label:hover {
+    color: $primaryColor;
+  }
+  
+  .tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: block; 
+    position: absolute;
+    right: 5000px;
+    padding: 1rem;
+    background: transparent;
+    color: $whiteColor;
+    
+  }
+  
+  .tabs input[type="radio"] {
+    display: none;
+  }
+  .tabs input[type="radio"]:checked + label {
+    color: $primaryColor;
+  }
+  .tabs input[type="radio"]:checked + label + .tab {
+    display: block; 
+    position: relative;
+    right: 0px;
+  }
+  .servicesBusiness .icon-text img{
+      width: 100px;
+  }
+  .yellowColor{
+      color: $primaryColor;
+  }
+
+  /* ClientsExperiences border animation css */
+  
+.draw-border{
+    --uiButtonTextColor: #000;
+    --uiButtonBorderWidth: var(--buttonBorderWidth, 4px);
+    --uiButtonBorderColor: var(--buttonBorderColor);
+    --uiButtonHoverTextColor: var(--buttonHoverTextColor);
+    --uiButtonHoverBorderColor: #5656d5;
+    box-shadow: inset 0 0 0 var(--uiButtonBorderWidth) var(--uiButtonBorderColor);
+    color: var(--uiButtonTextColor);
+    transition: color .25s .08333333s;
+    position: relative;
+  }
+  
+  .draw-border::before,
+  .draw-border::after{
+    content: '';  
+    box-sizing: border-box;	
+    width: 0;
+    height: 0;
+    border: 0 solid var(--uiButtonBorderColor);
+    pointer-events: none;
+    transition-property: border-color, width, height;
+    transition-duration: .25s;  
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .draw-border::before{
+    border-bottom-width: var(--uiButtonBorderWidth);
+    border-left-width: var(--uiButtonBorderWidth);
+    transition-delay: .35s, .25s, 0s;
+  }
+  .draw-border::after{
+    border-top-width: var(--uiButtonBorderWidth);
+    border-right-width: var(--uiButtonBorderWidth);
+    transition-delay: .35s, 0s, .25s;
+  }
+  .draw-border:hover{
+    color: #936e55;
+  }
+  .draw-border:hover::before, 
+  .draw-border:hover::after{
+    width: 100%;
+    height: 100%;
+    border-color: var(--uiButtonHoverBorderColor);
+    transition-duration: 0s, .25s, .25s;
+  }
+
+  .draw-border:hover::before{
+      transition-delay: 0s, 0s, .25s;
+  }
+  .draw-border:hover::after{
+    transition-delay: 0s, .25s, 0s;
+  }
+  body {
+    --buttonTextColor: #58afd1;
+    --buttonBorderColor: #58afd1;
+    --buttonBorderWidth: 4px;
+    --buttonHoverTextColor: #ffe593;
+    --buttonHoverBorderColor: #ffe593;
+  }
+
+/* ClientsExperiences border animation end css */
+
+/* timeline about css start */
+
+.timeline {
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+  }
+  
+  .timeline .timeline-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .timeline .timeline-end,
+  .timeline .timeline-start,
+  .timeline .timeline-year {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .timeline .timeline-end p,
+  .timeline .timeline-start p,
+  .timeline .timeline-year p {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    background: linear-gradient($primaryColor, #935e5b);
+    border-radius: 100px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    color: $whiteColor;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 8px solid $whiteColor;
+  }
+  
+  .timeline .timeline-year {
+    margin: 30px 0;
+  }
+  
+  .timeline .timeline-continue {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+  }
+  
+  .timeline .timeline-continue::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    background: $primaryColor;
+  }
+  
+  .timeline .row.timeline-left,
+  .timeline .row.timeline-right .timeline-date {
+    text-align: right;
+  }
+  
+  .timeline .row.timeline-right,
+  .timeline .row.timeline-left .timeline-date {
+    text-align: left;
+  }
+  
+  .timeline .timeline-date {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 41px 0 0 0;
+  }
+
+  .timeline .timeline-box,
+  .timeline .timeline-launch {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    background: $whiteColor;
+  }
+  
+  .timeline .timeline-launch {
+    width: 100%;
+    margin: 15px 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background: transparent;
+  }
+  
+  .timeline .timeline-box::after,
+  .timeline .timeline-box::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  .timeline .row.timeline-left .timeline-box::after,
+  .timeline .row.timeline-left .timeline-box::before {
+    left: 100%;
+  }
+  
+  .timeline .row.timeline-right .timeline-box::after,
+  .timeline .row.timeline-right .timeline-box::before {
+    right: 100%;
+  }
+  
+  .timeline .timeline-launch .timeline-box::after,
+  .timeline .timeline-launch .timeline-box::before {
+    left: 50%;
+    margin-left: -10px;
+  }
+  
+  .timeline .timeline-box::after {
+    top: 26px;
+    border-color: transparent transparent transparent $whiteColor;
+    border-width: 10px;
+  }
+  
+  .timeline .timeline-box::before {
+    top: 25px;
+    border-color: transparent transparent transparent #dddddd;
+    border-width: 11px;
+  }
+  
+  .timeline .row.timeline-right .timeline-box::after {
+    border-color: transparent $whiteColor transparent transparent;
+  }
+  
+  .timeline .row.timeline-right .timeline-box::before {
+    border-color: transparent #dddddd transparent transparent;
+  }
+  
+  .timeline .timeline-launch .timeline-box::after {
+    top: -20px;
+    border-color: transparent transparent #dddddd transparent;
+  }
+  
+  .timeline .timeline-launch .timeline-box::before {
+    top: -19px;
+    border-color: transparent transparent $whiteColor transparent;
+    border-width: 10px;
+    z-index: 1;
+  }
+  
+  .timeline .timeline-box .timeline-icon {
+    position: relative;
+    width: 40px;
+    height: auto;
+    float: left;
+  }
+  
+  .timeline .timeline-icon i {
+    font-size: 30px;
+    color: $primaryColor;
+  }
+  
+  .timeline .timeline-box .timeline-text {
+    position: relative;
+    width: calc(100% - 40px);
+    float: left;
+  }
+  
+  .timeline .timeline-launch .timeline-text {
+    width: 100%;
+  }
+  
+  .timeline .timeline-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  
+  .timeline .timeline-text p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  .case-hero .case-projects{
+    background: url("../public/images/Featured.jpg") no-repeat;
+    padding: 114px 50px 76px 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+    border-radius: 3px;
+    background-position: right top;
+  }
+  .case-hero .case-projects .content{
+    max-width: 675px;
+  }
+  .case-hero .tags li:not(:first-child):before {
+    content: "";
+    height: 4px;
+    width: 4px;
+    flex: 0 0 4px;
+    border-radius: 50%;
+    background: $whiteColor;
+    opacity: 0.5;
+    display: inline-block;
+    margin: 0 13px;
+}
+  .case-hero .tags li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+  
+  @media (max-width: 768px) {
+    .timeline .timeline-continue::after {
+      left: 40px;
+    }
+  
+    .timeline .timeline-end,
+    .timeline .timeline-start,
+    .timeline .timeline-year,
+    .timeline .row.timeline-left,
+    .timeline .row.timeline-right .timeline-date,
+    .timeline .row.timeline-right,
+    .timeline .row.timeline-left .timeline-date,
+    .timeline .timeline-launch {
+      text-align: left;
+    }
+  
+    .timeline .row.timeline-left .timeline-date::after,
+    .timeline .row.timeline-right .timeline-date::after {
+      left: 47px;
+    }
+  
+    .timeline .timeline-box,
+    .timeline .row.timeline-right .timeline-date,
+    .timeline .row.timeline-left .timeline-date {
+      margin-left: 55px;
+    }
+  
+    .timeline .timeline-launch .timeline-box {
+      margin-left: 0;
+    }
+  
+    .timeline .row.timeline-left .timeline-box::after {
+      left: -20px;
+      border-color: transparent $whiteColor transparent transparent;
+    }
+  
+    .timeline .row.timeline-left .timeline-box::before {
+      left: -22px;
+      border-color: transparent #dddddd transparent transparent;
+    }
+  
+    .timeline .timeline-launch .timeline-box::after,
+    .timeline .timeline-launch .timeline-box::before {
+      left: 30px;
+      margin-left: 0;
+    }
+  }
+/* timeline about css end*/
+
+.testimonialBg{
+  background-image: url('../public/images/days-support.jpg');
+  width: 100%;
+}
+
+.CaseInner .tags span {
+  border-radius: 50px;
+  padding: 5px 15px;
+  border: 1px solid $whiteColor;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8125rem;
+  line-height: 1.75rem;
+}
+
+.rs-cta {
+  padding: 100px 0;
+  background: url('../public/images/customer-service-sales.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  background-position: center;
+}
+.rs-cta .container {
+  position: relative;
+  z-index: 100;
+}
+ 
+  @media (max-width: 45em) {
+    .tabs .tab,
+    .tabs label {
+      order: initial;
+    }
+    .tabs label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+@media screen and (max-width: 1024px) {     
+  .finish{
+    font-size: 40px;
+    }
+    .responsive-form{
+      width: 100% !important;
+    } 
+    .nav-btn{
+      display: block;
+    }
+    .cross-responsive{
+      display: block;
+      color: #fff;
+    }
+    .nav-btn {
+      position: fixed;
+      top: 2vh;
+      right: 5vw;
+      background-color: #f04037;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+    
+    .fa-bars {
+      color: white;
+      transform: translate(0, 32%);
+    }
+    
+    #nav {
+      text-align: center;
+      position: fixed;
+      z-index: 100;
+      height: 0;
+      width: 0;
+      top: 0;
+      right: 0;
+      background: linear-gradient(45deg, #000000, #6e6e6e);
+      box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+      transition: all 1s;
+      align-items: unset !important;
+    }
+    
+    #nav:not(:target) {
+      right: -105%;
+      height: 100vh;
+      width: 0;
+    }
+    
+    #nav:target {
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
+    #nav li { 
+      list-style-type: none;
+      font-size: 24px;
+      margin-top: 20px;
+      transition: all 0.5s;
+    }
+    #nav li:hover {
+      transform: scale(1.2);
+      backface-visibility: hidden;
+    }
+    .nav{
+      display: block;
+      width: 100%;
+    }   
+    .tab img{
+      width: 100% !important;
+    }
+    .colResp{
+     width: 100%;
+     text-align: center !important;
+    }
+    .pixel-logo{
+      justify-content: center;
+      width: 100%;
+    }
+}
+@media screen and (max-width: 639px) {
+  .R-Top{
+    top: 70px;
+  }
+  .iconWork{
+    display:  block !important;
+    text-align: center;
+  }
+  .clientsCard{
+    margin-bottom: 20px;
+  }
+  .responsive-form .col-6{
+    width: 100%;
+  }
+  .responsive-form .btn-primary{
+    width: 100% !important;
+  }
+  .case-hero .case-projects{
+    padding: 20px;
+  }
+  .case-hero .case-projects .content{
+    max-width: 100%;
+  }
+  .realImpact{
+    flex-direction: column;
+  }
+  .ecommerce-Bg{
+    padding: 20px;
+  }
+  .caseStudy-Bg .realImpact .study-image img:not(.circle_pattern){
+    width: auto;
+  }
+  .bg-imagehalf{
+    z-index: -1;
+  }
+  .startWeAre p{
+    width: 100%!important;
+  }
+  .AboutExplan {
+    padding: 10px 0 !important;
+  }
+  .timeline .spacers{
+    padding: 30px 0;
+  }
+  .aboutPhoto img{
+    width: 100%;
+  }
+  .testimonialBg .space{
+   padding: 20px;
+  }
+  .case-contents{
+    width: 100% !important;
+  }
+  .ecommerce-content{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 575px) {
+.mobilecenter{
+    text-align: center;
+}  
+}
