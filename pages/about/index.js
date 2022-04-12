@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../../components/Header";
 import Head from "next/head";
+import Script from "next/script";
 import Footer from "../../components/Footer";
-import SliderCarousel from "../../components/Slider";
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import Testimonial from "../../components/Testimonials";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Data from './data.json'
 import OurServices from "../../components/OurServices";
 const About = () => {
-
   return (
     <React.Fragment>
       <Head>
@@ -22,70 +22,329 @@ const About = () => {
         ></link>
       </Head>
       <Header />
-      <section>
+
+      <section className="AboutInner position-relative">
+        <div className="bg-imagehalf position-absolute top-50">
+          <img src="/images/half circle.svg" alt="cicrle-image" />
+        </div>
         <div className="container px-4 py-2 py-5">
-          <div className="row align-items-center g-lg-5 py-5 ">
-            <div className="mx-auto col-lg-12  position-relative">
-              <form className="border rounded-3 bg-light pt-5 pb-5 adjust w-50 mx-auto">
-                <div className="">
-                  <p className="mb-1">Get In Touch</p>
-                  <h2 className="fw-bold pb-3 display-5">Start a Conversation</h2>
+          <div className="row align-items-center g-lg-5 py-5">
+            <div className="col-lg-6">
+              <div className="abouthero">
+                <div className="position-absolute top-0">
+                  <img src="/images/abstractAbout.png" alt="abstractAbout" />
                 </div>
-                <div className="form-floating mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  <label htmlFor="floatingInput">Name</label>
-                </div>
-                <div className="form-floating mb-3 adust">
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="floatingInput"
-                    placeholder="Email"
-                  />
-                  <label htmlFor="floatingPassword">Email</label>
-                </div>
-                <div className="form-floating mb-3 adust">
-                  <input
-                    type="Company name"
-                    className="form-control"
-                    id="floatingInput"
-                    placeholder="Company name"
-                  />
-                  <label htmlFor="floatingPassword">Company name</label>
-                </div>
-                <div className="form-floating mb-3 adust">
-                  <input
-                    type="Mobile Number"
-                    className="form-control"
-                    id="floatingPassword"
-                    placeholder="Mobile Number"
-                  />
-                  <label htmlFor="floatingPassword">Mobile Number</label>
-                </div>
-                <div className="mb-3 adust ">
-               <textarea id="message" cols="30" rows="7" placeholder="Message" className="form-control form-floating"></textarea>
-                </div>
-                <button
-                  className="w-100 btn btn-lg btn-primary py-3"
-                  type="submit"
+
+                <span className="text-white">about</span>
+                <h1 className="text-white titlepart fw-bold">
+                  Commitment. Passion. innovation.
+                </h1>
+                <p className="text-white fw-light">
+                  From some of the world’s largest companies to startups with
+                  that twinkle in the eye, we work with our clients to design,
+                  develop and deliver their next-generation products and digital
+                  experiences!
+                </p>
+                <p className="text-white fw-light mb-3">
+                  Our commitment, passion, and innovation are what our clients
+                  rely on to help them see around the bend, create, and respond
+                  to new opportunities, build competitive advantage, and
+                  redefine possibilities.
+                </p>
+                <a
+                  href="#"
+                  className="btn-primary p-3 text-decoration-none px-5 d-inline-block"
                 >
-                  Get Beta Access
-                </button>
-              </form>
-              <div className="form-secondimg h-100" >
-                <img src="/images/Group 1.svg" alt="Group Image" className="img-fluid h-100"/>
+                  Get In Tech
+                </a>
+              </div>
+            </div>
+
+            <div className="col-lg-6">
+              <div className="aboutPhoto text-center">
+                <img
+                  src="/images/about-img-copyright-2_2.png"
+                  alt="about-img-copyright"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      
+      <section className="whoWeAre">
+        <div className="container">
+          <div className="startWeAre">
+            <span className="yellowColor">who we are</span>
+            <h2 className="text-white fw-bold secondary-title mb-3">
+              welcome to our world
+            </h2>
+            <p className="text-white w-75">
+              Working with some of the largest companies in the world to
+              startups, our people have helped our clients reimagine their
+              business, stay agile, build stronger brands and engage their
+              customers like never before. We work at the cross-section of
+              technology, design, and business to deliver engaging digital
+              experiences and bring ideas to life.
+            </p>
+          </div>
+          <div className="row align-items-center g-lg-5 py-5">
+            <div className="col-lg-4">
+              <div className="AboutExplan py-5">
+                <h3 className="text-white mb-3">
+                  <span className="yellowColor">Reimagining</span> <br></br>
+                  &apos;what&apos;s next&apos;
+                </h3>
+                <p className="text-white lh-base">
+                  We bring together exceptional talent in technology, design,
+                  and business consulting to help our clients reimagine{" "}
+                  <b className="fw-bold">‘what’s next’</b> in an ever changing
+                  global environment.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-4">
+              <div className="AboutExplan py-5">
+                <h3 className="text-white mb-3">
+                  Driven by <br></br>
+                  <span className="yellowColor">values</span>
+                </h3>
+                <p className="text-white lh-base">
+                  Our culture values ethics and integrity above all else. In
+                  every engagement, we work with transparency, candidness, and
+                  responsibility. It’s a promise and it matters.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-4">
+              <div className="AboutExplan py-5">
+                <h3 className="text-white mb-3">
+                  Focused on <br></br>
+                  <span className="yellowColor">outcomes</span>
+                </h3>
+                <p className="text-white lh-base">
+                  Our clients’ success is how we measure our success. We believe
+                  in, and are committed to, the outcomes we promise. And we
+                  stand with our clients every step of the way.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="timeline">
+          <div className="container">
+            <div className="spacers">
+              <div className="row">
+                <div className="col-lg-6">
+                  <div className="aboutCompany">
+                    <h2 className="text-white display-6 fw-bold mb-3">
+                      Facts About{" "}
+                      <span className="yellowColor">Our Company</span>
+                    </h2>
+                    <p className="text-white text-opacity-50 lh-lg">
+                      We have been developing research and development for more
+                      than a decade to provide innovation to many sectors. Here
+                      are some facts and numbers from 2010 year that demonstrate
+                      our commitment to providing innovative solutions to our
+                      valued clients, partners, and communities.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="PhotoCompany text-center">
+                    <img src="/images/vd2.png" alt="vd2" className="w-75" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row pb-5">
+              <div className="col-lg-12">
+                <div className="timeline-container">
+                  <div className="timeline-end">
+                    <p>
+                      <i className="fas fa-key"></i>
+                    </p>
+                  </div>
+                  <div className="timeline-continue">
+                    <div className="row timeline-right">
+                      <div className="col-md-6">
+                        <p className="timeline-date text-white text-opacity-50">
+                          01 Jun 2020
+                        </p>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="timeline-box">
+                          <div className="timeline-icon">
+                            <i className="fas fa-user-friends"></i>
+                          </div>
+                          <div className="timeline-text">
+                            <h3 className="fs-3">100+ Experienced Team</h3>
+                            <p>
+                              Lorem ipsum dolor sit amet elit ornare velit non
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row timeline-left">
+                      <div className="col-md-6 d-md-none d-block">
+                        <p className="timeline-date text-white text-opacity-50">
+                          01 Jan 2020
+                        </p>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="timeline-box">
+                          <div className="timeline-icon d-md-none d-block">
+                            <i className="fa fa-business-time"></i>
+                          </div>
+                          <div className="timeline-text">
+                            <h3 className="fs-3">530+ Happy Clients.</h3>
+                            <p>
+                              Lorem ipsum dolor sit amet elit ornare velit non
+                            </p>
+                          </div>
+                          <div className="timeline-icon d-md-block d-none">
+                            <i className="fas fa-smile"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6 d-md-block d-none">
+                        <p className="timeline-date text-white text-opacity-50">
+                          01 Jan 2020
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col-12">
+                        <div className="timeline-year">
+                          <p>
+                            <i className="fas fa-key"></i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row timeline-right">
+                      <div className="col-md-6">
+                        <p className="timeline-date text-white text-opacity-50">
+                          01 Dec 2019
+                        </p>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="timeline-box">
+                          <div className="timeline-icon">
+                            <i className="fab fa-internet-explorer"></i>
+                          </div>
+                          <div className="timeline-text">
+                            <h3 className="fs-3">10+ Years of Experience.</h3>
+                            <p>
+                              Lorem ipsum dolor sit amet elit ornare velit non
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row timeline-left">
+                      <div className="col-md-6 d-md-none d-block">
+                        <p className="timeline-date text-white text-opacity-50">
+                          01 Sep 2019
+                        </p>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="timeline-box">
+                          <div className="timeline-icon d-md-none d-block">
+                            <i className="fa fa-cogs"></i>
+                          </div>
+                          <div className="timeline-text">
+                            <h3 className="fs-3">100% Quality Satisfaction.</h3>
+                            <p>
+                              Lorem ipsum dolor sit amet elit ornare velit non
+                            </p>
+                          </div>
+                          <div className="timeline-icon d-md-block d-none">
+                            <i className="fas fa-check-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6 d-md-block d-none">
+                        <p className="timeline-date text-white text-opacity-50">
+                          01 Sep 2019
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="row timeline-right">
+                      <div className="col-md-6">
+                        <p className="timeline-date text-white text-opacity-50">
+                          01 Jun 2019
+                        </p>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="timeline-box">
+                          <div className="timeline-icon">
+                            <i className="fas fa-industry"></i>
+                          </div>
+                          <div className="timeline-text">
+                            <h3 className="fs-3">50+ Industries serve.</h3>
+                            <p>
+                              Lorem ipsum dolor sit amet elit ornare velit non
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="timeline-start">
+                    <p>
+                      <i className="fas fa-key"></i>
+                    </p>
+                  </div>
+                  <div className="timeline-launch">
+                    <div className="timeline-box">
+                      <div className="timeline-text">
+                        <h3 className="fs-3">
+                          Launched our company on 01 Jan 2019
+                        </h3>
+                        <p>Lorem ipsum dolor sit amet</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section>
+        <div className="backend">
+          <div className="testimonialBg">
+          <div className="container">
+            <div className="row align-items-center space">
+              <div className="col-md-12 mt-0">
+              <h2 className="text-center text-white my-4 secondary-title fw-bold">
+              Testimonials
+            </h2>
+              </div>
+              <Testimonial 
+              settings={Data.testimonialsSettings}
+              data={Data.testimonials}
+              containerclassName="testimonials-wrapper text-white text-opacity-75 lh-lg text-center"
+              usernameWrapper="testimonialUser yellowColor fs-6 text-center"
+              />
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
 
       <Footer />
     </React.Fragment>
