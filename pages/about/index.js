@@ -337,7 +337,7 @@ const About = () => {
               <Testimonial 
               settings={Data.testimonialsSettings}
               data={Data.testimonials}
-              containerclassName="testimonials-wrapper text-white text-opacity-75 lh-lg text-center"
+              containerClass="testimonials-wrapper text-white text-opacity-75 lh-lg text-center"
               usernameWrapper="testimonialUser yellowColor fs-6 text-center"
               />
             </div>
