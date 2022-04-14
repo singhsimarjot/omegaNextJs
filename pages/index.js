@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import Header from "./../components/Header";
 import Head from "next/head";
-import Link from 'next/link'
+import Link from "next/link";
 import Footer from "./../components/Footer";
 import SliderCarousel from "./../components/Slider";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Data from "./about/data.json";
 import OurServices from "./../components/OurServices";
+import HubspotForm from "react-hubspot-form";
+
 const HireExpert = () => {
-  const[tab,setTab] = useState(0)
+  const [tab, setTab] = useState(0);
+
   return (
     <React.Fragment>
       <Head>
@@ -21,6 +24,14 @@ const HireExpert = () => {
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossOrigin="anonymous"
         ></link>
+
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/21780151.js"
+        ></script>
       </Head>
       <Header />
       <section>
@@ -58,23 +69,21 @@ const HireExpert = () => {
                   service
                 </li>
               </ul>
-              <Link
-              href="/inquiry"
-              >
-              <a
-             
-                className="btn-primary p-3 text-decoration-none px-5"
-              >
-                Get Started
-              </a>
+              <Link href="/inquiry">
+                <a className="btn-primary p-3 text-decoration-none px-5">
+                  Get Started
+                </a>
               </Link>
             </div>
             <div className="mx-auto col-md-6  position-relative R-Top">
               <div className="bg-secondimg">
                 <img src="/images/Group 1.svg" alt="Group Image" />
               </div>
-              <form className="border rounded-3 bg-light mw-380 mx-auto pt-5 pb-5 adjust">
-                <div className="form-floating mb-3">
+              <form
+                className="border rounded-3 bg-light mw-380 mx-auto pt-5 pb-5 adjust"
+                formId="b6a4f140-c6a0-415c-a7f2-77c40c706e31"
+              >
+                {/* <div className="form-floating mb-3">
                   <input
                     type="email"
                     className="form-control"
@@ -112,12 +121,20 @@ const HireExpert = () => {
                   <option value={2}>50 lakh</option>
                   <option value={3}>1 Crore</option>
                 </select>
-                <button
+                <a
                   className="w-100 btn btn-lg btn-primary py-3"
-                  type="submit"
+                  href="https://share.hsforms.com/1tqTxQMagQVyn8nfEDHBuMQcyto7"
+                  target="_blank"
                 >
-                  Get Beta Access
-                </button>
+                  Get Beta Access 
+                </a> */}
+                <HubspotForm
+                  portalId="21780151"
+                  formId="b6a4f140-c6a0-415c-a7f2-77c40c706e31"
+                  onSubmit={() => console.log("Submit!")}
+                  onReady={(form) => console.log("Form ready!")}
+                  loading={<div>Loading...</div>}
+                />
               </form>
             </div>
           </div>
@@ -269,9 +286,15 @@ const HireExpert = () => {
             </p>
             <div>
               <div className="tabs pt-5">
-                <input type="radio" name="tabs" id="tabone" checked={tab === 0} onClick={() => setTab(0)}/>
+                <input
+                  type="radio"
+                  name="tabs"
+                  id="tabone"
+                  defaultChecked={tab === 0}
+                  onClick={() => setTab(0)}
+                />
                 <label htmlFor="tabone">Frontend </label>
-                
+
                 <div className="tab">
                   <div className="g-4 py-5">
                     <ResponsiveMasonry
@@ -293,7 +316,13 @@ const HireExpert = () => {
                   </div>
                 </div>
 
-                <input type="radio" name="tabs" id="tabtwo" checked={tab === 1} onClick={() => setTab(1)} />
+                <input
+                  type="radio"
+                  name="tabs"
+                  id="tabtwo"
+                  defaultChecked={tab === 1}
+                  onClick={() => setTab(1)}
+                />
                 <label htmlFor="tabtwo">Backend</label>
                 <div className="tab">
                   <div className="g-4 py-5">
@@ -316,7 +345,13 @@ const HireExpert = () => {
                   </div>
                 </div>
 
-                <input type="radio" name="tabs" id="tabthree"checked={tab === 2} onClick={() => setTab(2)} />
+                <input
+                  type="radio"
+                  name="tabs"
+                  id="tabthree"
+                  defaultChecked={tab === 2}
+                  onClick={() => setTab(2)}
+                />
                 <label htmlFor="tabthree">Database</label>
                 <div className="tab">
                   <div className="g-4 py-5">
@@ -339,7 +374,13 @@ const HireExpert = () => {
                   </div>
                 </div>
 
-                <input type="radio" name="tabs" id="tabfour" checked={tab === 3} onClick={() => setTab(3)} />
+                <input
+                  type="radio"
+                  name="tabs"
+                  id="tabfour"
+                  defaultChecked={tab === 3}
+                  onClick={() => setTab(3)}
+                />
                 <label htmlFor="tabfour">CMS</label>
                 <div className="tab">
                   <div className="g-4 py-5">
@@ -362,7 +403,13 @@ const HireExpert = () => {
                   </div>
                 </div>
 
-                <input type="radio" name="tabs" id="tabfive" checked={tab === 4} onClick={() => setTab(4)}/>
+                <input
+                  type="radio"
+                  name="tabs"
+                  id="tabfive"
+                  defaultChecked={tab === 4}
+                  onClick={() => setTab(4)}
+                />
                 <label htmlFor="tabfive">Cloud</label>
                 <div className="tab">
                   <div className="g-4 py-5">
@@ -385,7 +432,13 @@ const HireExpert = () => {
                   </div>
                 </div>
 
-                <input type="radio" name="tabs" id="tabsix" checked={tab === 5} onClick={() => setTab(5)}/>
+                <input
+                  type="radio"
+                  name="tabs"
+                  id="tabsix"
+                  defaultChecked={tab === 5}
+                  onClick={() => setTab(5)}
+                />
                 <label htmlFor="tabsix">Testing</label>
                 <div className="tab">
                   <div className="g-4 py-5">
@@ -408,7 +461,13 @@ const HireExpert = () => {
                   </div>
                 </div>
 
-                <input type="radio" name="tabs" id="tabseven" checked={tab === 6} onClick={() => setTab(6)}/>
+                <input
+                  type="radio"
+                  name="tabs"
+                  id="tabseven"
+                  defaultChecked={tab === 6}
+                  onClick={() => setTab(6)}
+                />
                 <label htmlFor="tabseven">DevOps</label>
                 <div className="tab">
                   <div className="g-4 py-5">

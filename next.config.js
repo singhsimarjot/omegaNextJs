@@ -6,10 +6,9 @@ module.exports = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-}
-
-module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
 }
+
+
