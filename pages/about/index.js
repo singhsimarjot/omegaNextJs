@@ -22,11 +22,12 @@ const About = () => {
         ></link>
       </Head>
       <Header />
-
+    
+      <div className="position-relative">
+      <div className="bg-imagehalf">
+      </div>
+ 
       <section className="AboutInner position-relative">
-        <div className="bg-imagehalf position-absolute top-50">
-          <img src="/images/half circle.svg" alt="cicrle-image" />
-        </div>
         <div className="container px-4 py-2 py-5">
           <div className="row align-items-center g-lg-5 py-5">
             <div className="col-lg-6">
@@ -345,7 +346,7 @@ const About = () => {
         </div>
         </div>
     </section>
-
+    </div>
       <Footer />
     </React.Fragment>
   );

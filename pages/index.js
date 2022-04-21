@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./../components/Header";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import HubspotForm from "react-hubspot-form";
 
 const HireExpert = () => {
   const [tab, setTab] = useState(0);
+
 
   return (
     <React.Fragment>
@@ -34,10 +35,13 @@ const HireExpert = () => {
         ></script>
       </Head>
       <Header />
+      <div className="position-relative">
+      <div className="bg-imagehalf"></div> 
+     
       <section>
         <div className="container px-4 py-2 py-5">
-          <div className="row align-items-center g-lg-5 py-5">
-            <div className="col-md-6  text-center text-lg-start">
+          <div className="row g-lg-5 py-5">
+            <div className="col-md-6">
               <h1 className="fw-bold mb-3 text-white titlepart">
                 Programming With No Delays
               </h1>
@@ -80,7 +84,7 @@ const HireExpert = () => {
                 <img src="/images/Group 1.svg" alt="Group Image" />
               </div>
               <form
-                className="border rounded-3 bg-light mw-380 mx-auto pt-5 pb-5 adjust"
+                className="border rounded-3 bg-light mw-380 mx-auto pt-5 pb-1 adjust"
                 formId="b6a4f140-c6a0-415c-a7f2-77c40c706e31"
               >
                 {/* <div className="form-floating mb-3">
@@ -128,6 +132,7 @@ const HireExpert = () => {
                 >
                   Get Beta Access 
                 </a> */}
+                <div className="hubspot-container">
                 <HubspotForm
                   portalId="21780151"
                   formId="b6a4f140-c6a0-415c-a7f2-77c40c706e31"
@@ -135,16 +140,15 @@ const HireExpert = () => {
                   onReady={(form) => console.log("Form ready!")}
                   loading={<div>Loading...</div>}
                 />
+                </div>
               </form>
             </div>
           </div>
         </div>
       </section>
 
+
       <section className="position-relative">
-        <div className="bg-imagehalf">
-          <img src="/images/half circle.svg" alt="cicrle-image" />
-        </div>
         <div className="container px-4 py-5 text-center position-relative">
           <div className="row align-items-center g-lg-5 py-5 padd">
             <div className="col-md-12 text-center text-lg-start ">
@@ -197,7 +201,7 @@ const HireExpert = () => {
             <div className="row g-0">
               <div className="col-lg-4">
                 <div className="icon-text text-center py-5">
-                  <img src="/images/icon-1.webp" alt="icon-image" />
+                  <img src="/images/computer-ss.png" alt="icon-image" />
                   <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
                     WEB APPLICATION <br></br>DEVELOPMENT
                   </h3>
@@ -209,7 +213,7 @@ const HireExpert = () => {
               </div>
               <div className="col-lg-4">
                 <div className="icon-text text-center bg-black py-5 h-100">
-                  <img src="/images/icon2.webp" alt="icon-image" />
+                  <img src="/images/test.png" alt="icon-image" />
                   <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
                     MOBILE APPLICATION <br></br>DEVELOPMENT
                   </h3>
@@ -221,7 +225,7 @@ const HireExpert = () => {
               </div>
               <div className="col-lg-4">
                 <div className="icon-text text-center py-5">
-                  <img src="/images/icon3.webp" alt="icon-image" />
+                  <img src="/images/design-thinking.png" alt="icon-image" />
                   <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
                     DIGITAL EXPERIENCE <br></br>DESIGN
                   </h3>
@@ -233,7 +237,7 @@ const HireExpert = () => {
               </div>
               <div className="col-lg-4">
                 <div className="icon-text text-center bg-black py-5 h-100">
-                  <img src="/images/icon4.webp" alt="icon-image" />
+                  <img src="/images/setting.png" alt="icon-image" />
                   <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
                     CUSTOM SOFTWARE <br></br>DEVELOPMENT
                   </h3>
@@ -245,7 +249,7 @@ const HireExpert = () => {
               </div>
               <div className="col-lg-4">
                 <div className="icon-text text-center py-5">
-                  <img src="/images/icon5.webp" alt="icon-image" />
+                  <img src="/images/software.png" alt="icon-image" />
                   <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
                     ENTERPRISE SOFTWARE <br></br>SOLUTIONS
                   </h3>
@@ -258,7 +262,7 @@ const HireExpert = () => {
               </div>
               <div className="col-lg-4">
                 <div className="icon-text text-center bg-black py-5 h-100">
-                  <img src="/images/icon6.webp" alt="icon-image" />
+                  <img src="/images/analysis.png" alt="icon-image" />
                   <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
                     SOFTWARE TESTING <br></br>SERVICES
                   </h3>
@@ -468,14 +472,14 @@ const HireExpert = () => {
                   defaultChecked={tab === 6}
                   onClick={() => setTab(6)}
                 />
-                <label htmlFor="tabseven">DevOps</label>
+                <label htmlFor="tabseven">Mobile App</label>
                 <div className="tab">
                   <div className="g-4 py-5">
                     <ResponsiveMasonry
                       columnsCountBreakPoints={{ 550: 6, 750: 4, 900: 6 }}
                     >
                       <Masonry columnsCount={6} gutter="10px">
-                        {Data.devopsGallery.map((item, i) => (
+                        {Data.mobGallery.map((item, i) => (
                           <div key={i}>
                             <img
                               src={item.image}
@@ -709,6 +713,7 @@ const HireExpert = () => {
           </div>
         </div>
       </section>
+      </div>
 
       <Footer />
     </React.Fragment>

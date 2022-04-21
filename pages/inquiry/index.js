@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import Head from "next/head";
 import Footer from "../../components/Footer";
+import HubspotForm from "react-hubspot-form";
 const Inquiry = () => {
 
   return (
@@ -16,7 +17,8 @@ const Inquiry = () => {
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossOrigin="anonymous"
         ></link>
-       
+
+     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21780151.js"></script>
 
       </Head>
       <Header />
@@ -24,14 +26,22 @@ const Inquiry = () => {
         <div className="container px-4 py-2 py-5">
           <div className="row align-items-center g-lg-5 py-5 ">
             <div className="col-lg-12  position-relative">
-              <form className="border rounded-3 bg-light pt-5 pb-5 adjust w-75 responsive-form">
+              <form className="border rounded-3 bg-light pt-5 pb-1 adjust w-75 responsive-form m-auto">
                 <div className="">
                   <p className="mb-1">Get In Touch</p>
                   <h2 className="fw-bold pb-3 display-5">Start a Conversation</h2>
                 </div>
                 <div className="row">
-                    <div className="col-6">
-                <div className="form-floating mb-3">
+                    <div className="col-12">
+                    <HubspotForm
+                  portalId="21780151"
+                  formId="8a62db69-3d8a-4faa-a039-cac464d33d7e"
+                  onSubmit={() => console.log("Submit!")}
+                  onReady={(form) => console.log("Form ready!")}
+                  loading={<div>Loading...</div>}
+                />
+
+                {/* <div className="form-floating mb-3">
                   <input
                     type="text"
                     className="form-control"
@@ -85,11 +95,11 @@ const Inquiry = () => {
                   type="submit"
                 >
                   Get Beta Access
-                </button>
+                </button> */}
                 </div>
                 </div>
               </form>
-              <div className="form-secondimg h-100" >
+              <div className="form-secondimg" >
                 <img src="/images/Group 1.svg" alt="Group Image" className="img-fluid h-100"/>
               </div>
             </div>

@@ -63,22 +63,11 @@
   ],
   "frontendGallery": [
     {
-      "image": "./images/Adnroid-s.webp"
-    },
-    {
       "image": "./images/AngularJS-300x170.webp"
-    },
-    {
-      "image": "./images/Electron-300x170.webp"
-    },
-
-    {
-      "image": "./images/iOS-300x170.webp"
     },
     {
       "image": "./images/JavaScript-300x170.webp"
     },
-
     {
       "image": "./images/Native-300x170.webp"
     },
@@ -86,16 +75,10 @@
       "image": "./images/React-300x170.webp"
     },
     {
-      "image": "./images/ReactNative-300x170.webp"
-    },
-    {
       "image": "./images/TypeScript-300x170.webp"
     },
     {
       "image": "./images/Vue-300x170.webp"
-    },
-    {
-      "image": "./images/WPF-300x170.webp"
     },
     {
       "image": "./images/Xamarin-300x170.webp"
@@ -105,13 +88,6 @@
     {
       "image": "./images/AspNET-300x170.webp"
     },
-    {
-      "image": "./images/Go-300x170.webp"
-    },
-    {
-      "image": "./images/Java-300x170.webp"
-    },
-
     {
       "image": "./images/NETCore-300x170.webp"
     },
@@ -131,109 +107,27 @@
   ],
   "databaseGallery": [
     {
-      "image": "./images/cassandra-300x173.webp"
-    },
-    {
-      "image": "./images/Cloudera-300x172.webp"
-    },
-    {
-      "image": "./images/CosmosDB-300x172.webp"
-    },
-
-    {
-      "image": "./images/Couchbase-300x173.webp"
-    },
-    {
-      "image": "./images/ElasticSearch-300x173.webp"
-    },
-
-    {
-      "image": "./images/Firebase-300x173.webp"
-    },
-    {
       "image": "./images/Firestore-300x173.webp"
     },
     {
       "image": "./images/Group-32-300x173.webp"
     },
     {
-      "image": "./images/Hadoop-300x172.webp"
-    },
-    {
-      "image": "./images/hbase-300x173.webp"
-    },
-    {
-      "image": "./images/Hortonworks-300x172.webp"
-    },
-
-    {
-      "image": "./images/MAPR-300x172.webp"
-    },
-    {
-      "image": "./images/MongoDB-300x173.webp"
-    },
-    {
       "image": "./images/MySQL-300x173.webp"
-    },
-    {
-      "image": "./images/Neptune-300x172.webp"
     },
     {
       "image": "./images/Oracle-300x173.webp"
     },
     {
       "image": "./images/PostageSQL-300x173.webp"
-    },
-
-    {
-      "image": "./images/Redis-300x173.webp"
-    },
-    {
-      "image": "./images/RethinkDB-300x173.webp"
-    },
-    {
-      "image": "./images/SQLServer-300x173.webp"
     }
   ],
   "cmsGallery": [
     {
-      "image": "./images/Adapt-300x170.webp"
-    },
-    {
-      "image": "./images/Canvas-300x170.webp"
-    },
-    {
-      "image": "./images/Docebo-300x170.webp"
-    },
-
-    {
-      "image": "./images/Liferay-300x170.webp"
-    },
-    {
-      "image": "./images/Litmus-300x170.webp"
-    },
-
-    {
       "image": "./images/Magento-300x170.webp"
     },
     {
-      "image": "./images/Moodle-300x170.webp"
-    },
-    {
       "image": "./images/Shopify-300x170.webp"
-    },
-    {
-      "image": "./images/Sitecore-300x170.webp"
-    },
-    {
-      "image": "./images/Successfactors-300x170.webp"
-    },
-    {
-      "image": "./images/Totara-300x170.webp"
-    },
-
-    {
-      "image": "./images/Umbraco-300x170.webp"
     },
     {
       "image": "./images/Wordpress-300x170.webp"
@@ -330,50 +224,42 @@
       "image": "./images/SoupUI-300x170.webp"
     }
   ],
-  "devopsGallery": [
+  "mobGallery": [
   {
-    "image": "./images/CircleCI-300x170.webp"
-  },
-
-  {
-    "image": "./images/Codeship-300x170.webp"
+    "image": "./images/Adnroid-s.webp"
   },
   {
-    "image": "./images/gradle-300x170.webp"
+    "image": "./images/iOS-300x170.webp"
   },
   {
-    "image": "./images/Jenkins-300x170.webp"
-  },
-  {
-    "image": "./images/TravisCI-300x170.webp"
+    "image": "./images/ReactNative-300x170.webp"
   }
 ],
 "cardGallery": [
   {
-    "image": "./images/Segments-e1586416767923.webp"
+    "image": "./images/Segments01.png"
   },
   {
-    "image": "./images/UserCart-e1586576109156.webp"
+    "image": "./images/Segments02.png"
   },
   {
-    "image": "./images/Messages-e1586417028504.webp"
+    "image": "./images/Segments03.png"
   },
   {
-    "image": "./images/TotalProgress-e1586417275211.webp"
+    "image": "./images/Segments04.png"
   },
   {
-    "image": "./images/DatePicker-e1586417219560.webp"
+    "image": "./images/Segments05.png"
   },
   {
-    "image": "./images/GraphShapeLine-e1586416802443.webp"
+    "image": "./images/Segments06.png"
   },
   {
-    "image": "./images/DoubleGraph-e1586416914174.webp"
+    "image": "./images/Segments07.png"
   },
   {
-    "image": "./images/VerticalValues-e1586416878909.webp"
+    "image": "./images/Segments08.png"
   }
-
 ],
 "testimonialsSettings": {
   "dots": true,
