@@ -8,12 +8,16 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Data from "./about/data.json";
 import OurServices from "./../components/OurServices";
 import HubspotForm from "react-hubspot-form";
+import Scrollbar from '../components/SmoothScroll'
+
 
 const HireExpert = () => {
   const [tab, setTab] = useState(0);
+  
 
 
   return (
+  
     <React.Fragment>
       <Head>
         <title>Hire Expert</title>
@@ -38,9 +42,10 @@ const HireExpert = () => {
 
       </Head>
       <Header />
+    
       <div className="position-relative">
       <div className="bg-imagehalf"></div> 
-     
+
       <section>
         <div className="container px-4 py-2 py-5">
           <div className="row g-lg-5 py-5">
@@ -190,95 +195,89 @@ const HireExpert = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div className="servicesBusiness">
-          <div className="container-fluid p-0">
-            <h2 className="secondary-title fw-bold lh-1 mb-3 text-center text-white titlesection">
-              All That Your Business Needs
-            </h2>
-            <p className="text-center text-white pb-5">
-              We add development capacity to tech teams. Our value isn’t limited
-              to building teams but is equally distributed across the project
-              lifecycle.
-            </p>
-            <div className="row g-0">
-              <div className="col-lg-4">
-                <div className="icon-text text-center py-5">
-                  <img src="/images/computer-ss.png" alt="icon-image" />
-                  <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
-                    WEB APPLICATION <br></br>DEVELOPMENT
-                  </h3>
-                  <p className="text-white lh-base">
-                    Create mission-critical workflows with <br></br>
-                    enterprise-grade web applications.
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="icon-text text-center bg-black py-5 h-100">
-                  <img src="/images/test.png" alt="icon-image" />
-                  <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
-                    MOBILE APPLICATION <br></br>DEVELOPMENT
-                  </h3>
-                  <p className="text-white lh-base">
-                    Mobile applications B2B and B2C for businesses <br></br>are
-                    eager to move to a mobile-first future.
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="icon-text text-center py-5">
-                  <img src="/images/design-thinking.png" alt="icon-image" />
-                  <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
-                    DIGITAL EXPERIENCE <br></br>DESIGN
-                  </h3>
-                  <p className="text-white lh-base">
-                    Extend your development with top <br></br>programmers on
-                    your terms and with assured <br></br>outcomes.
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="icon-text text-center bg-black py-5 h-100">
-                  <img src="/images/setting.png" alt="icon-image" />
-                  <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
-                    CUSTOM SOFTWARE <br></br>DEVELOPMENT
-                  </h3>
-                  <p className="text-white lh-base">
-                    Build custom applications to solve your specific <br></br>
-                    business difficulties.{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="icon-text text-center py-5">
-                  <img src="/images/software.png" alt="icon-image" />
-                  <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
-                    ENTERPRISE SOFTWARE <br></br>SOLUTIONS
-                  </h3>
-                  <p className="text-white lh-base">
-                    Working with our product specialists and <br></br>utilising
-                    the best testing services, you can shape <br></br>and
-                    confirm your vision.
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="icon-text text-center bg-black py-5 h-100">
-                  <img src="/images/analysis.png" alt="icon-image" />
-                  <h3 className="text-white fs-3 lh-base py-4 mb-0 fw-bold">
-                    SOFTWARE TESTING <br></br>SERVICES
-                  </h3>
-                  <p className="text-white lh-base">
-                    With our rigorous QA procedures, you can <br></br>
-                    confidently release software faster.
-                  </p>
-                </div>
-              </div>
+      <section className="services-section" id="scroll-section">
+        <div className="container">
+            <div className="sec-title light centered">
+                <h2 className="text-white text-center">What We Do</h2>
+                <p className="text-white text-center pb-5">We add development capacity to tech teams. Our value isn’t limited to building teams but is equally <br></br>distributed across the project lifecycle.</p>
             </div>
-          </div>
+            <div className="row clearfix">
+                <div className="service-block col-lg-4 col-md-6 col-sm-12 now-in-view">
+                    <div className="inner-box wow flipInY animated" data-wow-delay="0ms">
+                        <div className="hover-curve"></div>
+                        <div className="count">01</div>
+                        <h3 className="text-white text-uppercase">ui/ux design</h3>
+                        <div className="icon-box">
+                          <img src="/images/graphic-design01.png" />
+                          </div>
+                        <div className="text-white">Mobile applications B2B and B2C for businesses are eager to move to a mobile-first future.</div>
+                    </div>
+                </div>
+              
+                <div className="service-block col-lg-4 col-md-6 col-sm-12 now-in-view">
+                    <div className="inner-box wow flipInY animated" data-wow-delay="300ms">
+                        <div className="hover-curve"></div>
+                        <div className="count">02</div>
+                        <h3 className="text-white text-uppercase">Web design</h3>
+                        <div className="icon-box">
+                          <img src="/images/web-designs02.png" />
+                          </div>
+                        <div className="text-white">Create mission-critical workflows with enterprise-grade web applications.</div>
+                    </div>
+                </div>
+              
+                <div className="service-block col-lg-4 col-md-6 col-sm-12 now-in-view">
+                    <div className="inner-box wow flipInY animated" data-wow-delay="600ms">
+                        <div className="hover-curve"></div>
+                        <div className="count">03</div>
+                        <h3 className="text-white text-uppercase">digital marketing</h3>
+                        <div className="icon-box">
+                          <img src="/images/bullhorn03.png" />
+                          </div>
+                        <div className="text-white">Extend your development with top programmers on your terms and with assured
+                        outcomes.</div>
+                    </div>
+                </div>
+
+                <div className="service-block col-lg-4 col-md-6 col-sm-12 now-in-view">
+                    <div className="inner-box wow flipInY animated" data-wow-delay="0ms">
+                        <div className="hover-curve"></div>
+                        <div className="count">04</div>
+                        <h3 className="text-white">CUSTOM SOFTWARE DEVELOPMENT</h3>
+                        <div className="icon-box">
+                          <img src="/images/setting.png" />
+                          </div>
+                        <div className="text-white">Build custom applications to solve your specific business difficulties.</div>
+                    </div>
+                </div>
+              
+                <div className="service-block col-lg-4 col-md-6 col-sm-12 now-in-view">
+                    <div className="inner-box wow flipInY animated" data-wow-delay="300ms">
+                        <div className="hover-curve"></div>
+                        <div className="count">05</div>
+                        <h3 className="text-white">ENTERPRISE SOFTWARE SOLUTIONS</h3>
+                        <div className="icon-box">
+                          <img src="/images/software.png" />
+                          </div>
+                        <div className="text-white">Working with our product specialists and utilising the best testing services, you can shape
+                        and confirm your vision.</div>
+                    </div>
+                </div>
+              
+                <div className="service-block col-lg-4 col-md-6 col-sm-12 now-in-view">
+                    <div className="inner-box wow flipInY animated" data-wow-delay="600ms">
+                        <div className="hover-curve"></div>
+                        <div className="count">06</div>
+                        <h3 className="text-white">SOFTWARE TESTING SERVICES</h3>
+                        <div className="icon-box">
+                          <img src="/images/analysis.png" />
+                          </div>
+                        <div className="text-white">With our rigorous QA procedures, you can confidently release software faster.</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
       <section>
         <div className="BgBlue py-5">
           <div className="container px-4">
@@ -716,10 +715,13 @@ const HireExpert = () => {
           </div>
         </div>
       </section>
-      </div>
 
+      </div>
+      
       <Footer />
+
     </React.Fragment>
+    
   );
 };
 

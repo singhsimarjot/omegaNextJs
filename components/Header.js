@@ -26,7 +26,7 @@ const Header = () => {
 
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 hoverText">
                     <li><a href="#" className="cross-responsive" aria-label="Close Navigation"><i className="fa fa-times"></i></a></li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link href="/">
                                 <a
 
@@ -44,7 +44,7 @@ const Header = () => {
                                   Case Study
                                 </a>
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link href="/about">
                                 <a
