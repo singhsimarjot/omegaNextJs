@@ -26,13 +26,16 @@ const HireExpert = () => {
           crossOrigin="anonymous"
         ></link>
 
-        <script
+        {/* <script
           type="text/javascript"
           id="hs-script-loader"
           async
           defer
           src="//js.hs-scripts.com/21780151.js"
-        ></script>
+        ></script> */}
+
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21780151.js"></script>
+
       </Head>
       <Header />
       <div className="position-relative">
