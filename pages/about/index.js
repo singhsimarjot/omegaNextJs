@@ -7,7 +7,8 @@ import Testimonial from "../../components/Testimonials";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Data from './data.json'
 import OurServices from "../../components/OurServices";
-const About = () => {
+const About = ({data}) => {
+
   return (
     <React.Fragment>
       <Head>
@@ -32,31 +33,16 @@ const About = () => {
           <div className="row align-items-center g-lg-5 py-5">
             <div className="col-lg-6">
               <div className="abouthero">
-                <div className="position-absolute top-0">
+              <div dangerouslySetInnerHTML={{ __html: data?.aboutInnerText }}>
+                  </div>
+                {/* <div className="position-absolute top-0">
                   <img src="/images/abstractAbout.png" alt="abstractAbout" />
-                </div>
-
-                <span className="text-white">about</span>
-                <h1 className="text-white titlepart fw-bold">
-                  Commitment. Passion. innovation.
-                </h1>
-                <p className="text-white fw-light">
-                  From some of the world’s largest companies to startups with
-                  that twinkle in the eye, we work with our clients to design,
-                  develop and deliver their next-generation products and digital
-                  experiences!
-                </p>
-                <p className="text-white fw-light mb-3">
-                  Our commitment, passion, and innovation are what our clients
-                  rely on to help them see around the bend, create, and respond
-                  to new opportunities, build competitive advantage, and
-                  redefine possibilities.
-                </p>
+                </div> */}
                 <a
-                  href="#"
+                  href={data?.aboutInnerButton}
                   className="btn-primary p-3 text-decoration-none px-5 d-inline-block"
                 >
-                  Get In Tech
+                Get In Tech
                 </a>
               </div>
             </div>
@@ -64,7 +50,7 @@ const About = () => {
             <div className="col-lg-6">
               <div className="aboutPhoto text-center">
                 <img
-                  src="/images/about-img-copyright-2_2.png"
+                  src={data?.aboutInnerRightImage.mediaItemUrl}
                   alt="about-img-copyright"
                 />
               </div>
@@ -76,9 +62,10 @@ const About = () => {
       <section className="whoWeAre">
         <div className="container">
           <div className="startWeAre">
-            <span className="yellowColor">who we are</span>
+            <div dangerouslySetInnerHTML={{ __html: data?.startWeAre }}></div>
+            {/* <span className="yellowColor">who we are</span>
             <h2 className="text-white fw-bold secondary-title mb-3">
-              welcome to our world
+             welcome to our world
             </h2>
             <p className="text-white w-75">
               Working with some of the largest companies in the world to
@@ -87,25 +74,24 @@ const About = () => {
               customers like never before. We work at the cross-section of
               technology, design, and business to deliver engaging digital
               experiences and bring ideas to life.
-            </p>
+            </p> */}
           </div>
           <div className="row align-items-center g-lg-5 py-5">
-            <div className="col-lg-4">
+          {data?.aboutSecondData?.map((item,i)=><div className="col-lg-4" key={i}>
               <div className="AboutExplan py-5">
                 <h3 className="text-white mb-3">
-                  <span className="yellowColor">Reimagining</span> <br></br>
-                  &apos;what&apos;s next&apos;
+                {item.aboutSecondTitle}
+                <br></br>
+                <span className="yellowColor">{item.aboutSecondTitleRed}</span>
                 </h3>
                 <p className="text-white lh-base">
-                  We bring together exceptional talent in technology, design,
-                  and business consulting to help our clients reimagine{" "}
-                  <b className="fw-bold">‘what’s next’</b> in an ever changing
-                  global environment.
+                {item.aboutSecondPharagraph}
                 </p>
               </div>
             </div>
+            )}
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <div className="AboutExplan py-5">
                 <h3 className="text-white mb-3">
                   Driven by <br></br>
@@ -131,7 +117,7 @@ const About = () => {
                   stand with our clients every step of the way.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -143,9 +129,10 @@ const About = () => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="aboutCompany">
-                    <h2 className="text-white display-6 fw-bold mb-3">
-                      Facts About{" "}
-                      <span className="yellowColor">Our Company</span>
+                    <div dangerouslySetInnerHTML={{ __html: data?.aboutCompany }}></div>
+                    {/* <h2 className="text-white display-6 fw-bold mb-3">
+                      Facts About
+                      <span className="yellowColor"> Our Company</span>
                     </h2>
                     <p className="text-white text-opacity-50 lh-lg">
                       We have been developing research and development for more
@@ -153,18 +140,20 @@ const About = () => {
                       are some facts and numbers from 2010 year that demonstrate
                       our commitment to providing innovative solutions to our
                       valued clients, partners, and communities.
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="PhotoCompany text-center">
-                    <img src="/images/vd2.png" alt="vd2" className="w-75" />
+                    <img src={data?.aboutCompanyRightPhoto.mediaItemUrl} alt="vd2" className="w-75" />
                   </div>
                 </div>
               </div>
             </div>
             <div className="row pb-5">
-              <div className="col-lg-12">
+              <div dangerouslySetInnerHTML={{ __html: data?.aboutTimelineSection}}></div>
+            
+              {/* <div className="col-lg-12">
                 <div className="timeline-container">
                   <div className="timeline-end">
                     <p>
@@ -319,7 +308,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -332,12 +321,12 @@ const About = () => {
             <div className="row align-items-center space">
               <div className="col-md-12 mt-0">
               <h2 className="text-center text-white my-4 secondary-title fw-bold">
-              Testimonials
-            </h2>
+              {data?.aboutTestimonials}
+              </h2>
               </div>
               <Testimonial 
               settings={Data.testimonialsSettings}
-              data={Data.testimonials}
+              data={data?.aboutTestimonialsData}
               containerClass="testimonials-wrapper text-white text-opacity-75 lh-lg text-center"
               usernameWrapper="testimonialUser yellowColor fs-6 text-center"
               />
@@ -352,4 +341,55 @@ const About = () => {
   );
 };
 
-export default About;
+export async function getStaticProps() {
+const res = await fetch("http://localhost/pixel-mutation/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      query: `
+      query NewQuery {
+        page(id: "cG9zdDoxMg==") {
+          id
+          title
+          aboutUs {
+            aboutInnerText
+          aboutInnerButton {
+            url
+          }
+          aboutInnerRightImage {
+            mediaItemUrl
+          }
+          startWeAre
+          aboutSecondData {
+            aboutSecondTitle
+            aboutSecondTitleRed
+            aboutSecondPharagraph
+          }
+          aboutCompany
+          aboutCompanyRightPhoto {
+            mediaItemUrl
+          }
+          aboutTimelineSection
+          aboutTestimonials
+          aboutTestimonialsData {
+            description
+            name
+          }
+        }
+        }
+      }
+      `,
+    }),
+  });
+
+
+
+      const json = await res.json();
+      return {
+        props: {
+          data: json.data.page.aboutUs,
+        },
+      };
+    }
+    
+    export default About;

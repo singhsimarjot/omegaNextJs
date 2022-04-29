@@ -8,10 +8,14 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Data from "./about/data.json";
 import OurServices from "./../components/OurServices";
 import HubspotForm from "react-hubspot-form";
-
-const HireExpert = () => {
+import AOS from "aos";
+import "aos/dist/aos.css";
+const HireExpert = ({ data }) => {
   const [tab, setTab] = useState(0);
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
+console.log(data)
   return (
     <div>
       <Head>
@@ -53,13 +57,26 @@ const HireExpert = () => {
         <section>
           <div className="container px-4 py-2 py-5">
             <div className="row g-lg-5 py-5">
-              <div className="col-md-6 animate__animated animate__bounceInLeft">
-                <h1 className="fw-bold mb-3 text-white titlepart  ">
-                  Programming With No Delays
+              <div 
+                className="col-md-6 "
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="900" 
+                
+              >
+                <div dangerouslySetInnerHTML={{ __html: data?.heroPartTitle }}>
+                
+                </div>
+               
+                
+
+                {/* <h1 className="fw-bold mb-3 text-white titlepart">
+                Programming With No Delays
                 </h1>
-                <p className="mb-3 text-white guranteeText">
-                  We guarantee you&apos;ll be happy after 30 days or we
-                  won&apos;t invoice you
+
+                <p className="mb-3 text-white guranteeText"> 
+                We guarantee you'll be happy after 30 days or we won't invoice you
                 </p>
                 <ul className="text-white list-inline p-0 mb-5">
                   <li className="lh-lg">
@@ -84,73 +101,36 @@ const HireExpert = () => {
                     Hundreds of developers, designers and project managers at
                     your service
                   </li>
-                </ul>
+                </ul> */}
                 <Link href="/inquiry">
                   <a className="btn-primary p-3 text-decoration-none px-5">
                     Get Started
                   </a>
                 </Link>
               </div>
-              <div className="mx-auto col-md-6  position-relative R-Top ">
+              <div className="mx-auto col-md-6  position-relative R-Top">
                 <div className="bg-secondimg">
-                  <img src="/images/Group 1.svg" alt="Group Image" />
+                  <img src={data?.formBackroundImage.mediaItemUrl} alt="Group Image" />
                 </div>
                 <form
-                  className="border rounded-3 bg-light mw-380 mx-auto pt-5 pb-1 adjust animate__animated animate__bounceInRight"
+                  className="border rounded-3 bg-light mw-380 mx-auto pt-5 pb-1"
+                  data-aos="fade-left"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="900"
                   formId="b6a4f140-c6a0-415c-a7f2-77c40c706e31"
                 >
-                  {/* <div className="form-floating mb-3">
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  <label htmlFor="floatingInput">Email address</label>
-                </div>
-                <div className="form-floating mb-3 adust">
-                  <input
-                    type="Company name"
-                    className="form-control"
-                    id="floatingPassword"
-                    placeholder="Company name"
-                  />
-                  <label htmlFor="floatingPassword">Company name</label>
-                </div>
-                <select
-                  className="form-select form-select-lg mb-3"
-                  aria-label=".form-select-lg example"
-                  defaultValue=""
-                >
-                  <option value={0}>Company size</option>
-                  <option value={1}>One</option>
-                  <option value={2}>Two</option>
-                  <option value={3}>Three</option>
-                </select>
-                <select
-                  className="form-select form-select-lg mb-3"
-                  aria-label=".form-select-lg example"
-                  defaultValue=""
-                >
-                  <option value={0}>Yearly budget</option>
-                  <option value={1}>20 lakh</option>
-                  <option value={2}>50 lakh</option>
-                  <option value={3}>1 Crore</option>
-                </select>
-                <a
-                  className="w-100 btn btn-lg btn-primary py-3"
-                  href="https://share.hsforms.com/1tqTxQMagQVyn8nfEDHBuMQcyto7"
-                  target="_blank"
-                >
-                  Get Beta Access 
-                </a> */}
                   <div className="hubspot-container">
                     <HubspotForm
                       portalId="21780151"
                       formId="b6a4f140-c6a0-415c-a7f2-77c40c706e31"
                       onSubmit={() => console.log("Submit!")}
                       onReady={(form) => console.log("Form ready!")}
-                      loading={<div>Loading...</div>}
+                      loading={
+                        <div>
+                          <div className="load1"></div>
+                        </div>
+                      }
                     />
                   </div>
                 </form>
@@ -164,11 +144,10 @@ const HireExpert = () => {
             <div className="row align-items-center g-lg-5 py-5 padd">
               <div className="col-md-12 text-center text-lg-start ">
                 <h2 className="secondary-title fw-bold mb-3 text-center text-white titlesection">
-                  Why Omega would <br />
-                  be your best fit?
+                  {data?.masonryImagesTitle}
                 </h2>
                 <p className="text-center text-white-secondary custom">
-                  Watch this 1 min video to learn about Omega.
+                {data?.masonryParagraphText}
                 </p>
               </div>
             </div>
@@ -183,12 +162,12 @@ const HireExpert = () => {
                       columnsCountBreakPoints={{ 550: 4, 750: 4, 900: 4 }}
                     >
                       <Masonry columnsCount={4} gutter="10px">
-                        {Data.cardGallery.map((item, i) => {
+                        {data?.masonryImages?.map((item, i) => {
                           const classes = i % 2 !== 0 ? "cardItems" : "";
                           return (
                             <div key={i} className={classes}>
                               <img
-                                src={item.image}
+                                src={item.cardMasonryImage.mediaItemUrl}
                                 key={i}
                                 alt="Icon"
                                 style={{ width: "100%", display: "block" }}
@@ -204,50 +183,57 @@ const HireExpert = () => {
             </div>
           </div>
         </section>
-        <section className="services-section" id="scroll-section">
+        <section className="services-section">
           <div className="container">
             <div className="sec-title light centered">
-              <h2 className="text-white text-center">What We Do</h2>
+              <h2 className="text-white text-center">{data?.serviceBlockStartTitle}</h2>
               <p className="text-white text-center pb-5">
-                We add development capacity to tech teams. Our value isn’t
-                limited to building teams but is equally <br></br>distributed
-                across the project lifecycle.
+              {data?.serviceBlockStartParagraph}
               </p>
             </div>
-            <div className="row">
-              <div className="service-block col-lg-4 col-md-6 col-sm-12">
-                <div className="inner-box">
-                  <div className="hover-curve"></div>
-                  <div className="count">01</div>
-                  <h3 className="text-white text-uppercase">ui/ux design</h3>
+            <div
+              className="row"
+              data-aos="flip-right"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="900"
+            >
+              {data?.serviceBlock?.map((item,i)=><div className="services-block col-lg-4 col-md-6 col-sm-12" key={i}>
+                <div className="inner-box-content">
+                  <div className="hover-effect"></div>
+                  <div className="count"> {i<= 9 && '0' }{i + 1}</div>
+                  <h3 className="text-white text-uppercase">{item.serviceTitle}</h3>
                   <div className="icon-box">
-                    <img src="/images/graphic-design01.png" />
+                    <img src={item.iconBox.mediaItemUrl} />
                   </div>
                   <div className="text-white">
-                    Mobile applications B2B and B2C for businesses are eager to
-                    move to a mobile-first future.
+                    <p>{item.serviceExplanText}</p>
                   </div>
                 </div>
               </div>
+)
 
-              <div className="service-block col-lg-4 col-md-6 col-sm-12">
-                <div className="inner-box">
-                  <div className="hover-curve"></div>
+              }
+
+              
+              {/* <div className="services-block col-lg-4 col-md-6 col-sm-12">
+                <div className="inner-box-content">
+                  <div className="hover-effect"></div>
                   <div className="count">02</div>
                   <h3 className="text-white text-uppercase">Web design</h3>
                   <div className="icon-box">
                     <img src="/images/web-designs02.png" />
                   </div>
                   <div className="text-white">
-                    Create mission-critical workflows with enterprise-grade web
-                    applications.
+                  <p>Create mission-critical workflows with enterprise-grade web
+                    applications.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="service-block col-lg-4 col-md-6 col-sm-12">
-                <div className="inner-box">
-                  <div className="hover-curve"></div>
+              <div className="services-block col-lg-4 col-md-6 col-sm-12">
+                <div className="inner-box-content">
+                  <div className="hover-effect"></div>
                   <div className="count">03</div>
                   <h3 className="text-white text-uppercase">
                     digital marketing
@@ -256,56 +242,56 @@ const HireExpert = () => {
                     <img src="/images/bullhorn03.png" />
                   </div>
                   <div className="text-white">
-                    Extend your development with top programmers on your terms
-                    and with assured outcomes.
+                  <p>Extend your development with top programmers on your terms
+                    and with assured outcomes.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="service-block col-lg-4 col-md-6 col-sm-12">
-                <div className="inner-box">
-                  <div className="hover-curve"></div>
+              <div className="services-block col-lg-4 col-md-6 col-sm-12">
+                <div className="inner-box-content">
+                  <div className="hover-effect"></div>
                   <div className="count">04</div>
                   <h3 className="text-white">CUSTOM SOFTWARE DEVELOPMENT</h3>
                   <div className="icon-box">
                     <img src="/images/setting.png" />
                   </div>
                   <div className="text-white">
-                    Build custom applications to solve your specific business
-                    difficulties.
+                  <p>Build custom applications to solve your specific business
+                    difficulties.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="service-block col-lg-4 col-md-6 col-sm-12">
-                <div className="inner-box">
-                  <div className="hover-curve"></div>
+              <div className="services-block col-lg-4 col-md-6 col-sm-12">
+                <div className="inner-box-content">
+                  <div className="hover-effect"></div>
                   <div className="count">05</div>
                   <h3 className="text-white">ENTERPRISE SOFTWARE SOLUTIONS</h3>
                   <div className="icon-box">
                     <img src="/images/software.png" />
                   </div>
                   <div className="text-white">
-                    Working with our product specialists and utilising the best
-                    testing services, you can shape and confirm your vision.
+                  <p>Working with our product specialists and utilising the best
+                    testing services, you can shape and confirm your vision.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="service-block col-lg-4 col-md-6 col-sm-12">
-                <div className="inner-box">
-                  <div className="hover-curve"></div>
+              <div className="services-block col-lg-4 col-md-6 col-sm-12">
+                <div className="inner-box-content">
+                  <div className="hover-effect"></div>
                   <div className="count">06</div>
                   <h3 className="text-white">SOFTWARE TESTING SERVICES</h3>
                   <div className="icon-box">
                     <img src="/images/analysis.png" />
                   </div>
                   <div className="text-white">
-                    With our rigorous QA procedures, you can confidently release
-                    software faster.
+                  <p>With our rigorous QA procedures, you can confidently release
+                    software faster.</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -313,13 +299,10 @@ const HireExpert = () => {
           <div className="BgBlue py-5">
             <div className="container px-4">
               <h2 className="secondary-title fw-bold mb-3 text-white secondary text-center pt-5 titlesection">
-                Everything web
+              {data?.tabLogoMainTitle}
               </h2>
               <p className="text-white text-center">
-                Our company also offers complete range of web services
-                especially designed to help clients re-imagine and then capture
-                newest digital opportunities and to also strengthen performance
-                of existing capabilities and digital assets.
+              {data?.tabLogoMainParagraph}
               </p>
               <div>
                 <div className="tabs pt-5">
@@ -338,10 +321,10 @@ const HireExpert = () => {
                         columnsCountBreakPoints={{ 550: 6, 750: 4, 900: 6 }}
                       >
                         <Masonry columnsCount={6} gutter="10px">
-                          {Data.frontendGallery.map((item, i) => (
+                        {data?.tabLogoPhoto?.map((item, i) =>  (
                             <div key={i}>
                               <img
-                                src={item.image}
+                                src={item.tabImageLogos.mediaItemUrl}      
                                 key={i}
                                 alt="Icon"
                                 style={{ width: "190px", display: "block" }}
@@ -367,10 +350,10 @@ const HireExpert = () => {
                         columnsCountBreakPoints={{ 550: 6, 750: 4, 900: 6 }}
                       >
                         <Masonry columnsCount={6} gutter="10px">
-                          {Data.backendGallery.map((item, i) => (
+                        {data?.tabLogoBankend?.map((item, i) => (
                             <div key={i}>
                               <img
-                                src={item.image}
+                                src={item.tabBackendImage.mediaItemUrl}
                                 key={i}
                                 alt="Icon"
                                 style={{ width: "190px", display: "block" }}
@@ -396,10 +379,10 @@ const HireExpert = () => {
                         columnsCountBreakPoints={{ 550: 6, 750: 4, 900: 6 }}
                       >
                         <Masonry columnsCount={6} gutter="10px">
-                          {Data.databaseGallery.map((item, i) => (
+                        {data?.tabLogoDatabase?.map((item, i) => (
                             <div key={i}>
                               <img
-                                src={item.image}
+                                src={item.tabDatabaseImages.mediaItemUrl}
                                 key={i}
                                 alt="Icon"
                                 style={{ width: "190px", display: "block" }}
@@ -425,10 +408,10 @@ const HireExpert = () => {
                         columnsCountBreakPoints={{ 550: 6, 750: 4, 900: 6 }}
                       >
                         <Masonry columnsCount={6} gutter="10px">
-                          {Data.cmsGallery.map((item, i) => (
+                        {data?.tabLogoCms?.map((item, i) => (
                             <div key={i}>
                               <img
-                                src={item.image}
+                                src={item.tabCmsImages.mediaItemUrl}
                                 key={i}
                                 alt="Icon"
                                 style={{ width: "190px", display: "block" }}
@@ -454,10 +437,10 @@ const HireExpert = () => {
                         columnsCountBreakPoints={{ 550: 6, 750: 4, 900: 6 }}
                       >
                         <Masonry columnsCount={6} gutter="10px">
-                          {Data.cloudGallery.map((item, i) => (
+                        {data?.tabLogoCloud?.map((item, i) => (
                             <div key={i}>
                               <img
-                                src={item.image}
+                                src={item.tabCloudImages.mediaItemUrl}
                                 key={i}
                                 alt="Icon"
                                 style={{ width: "190px", display: "block" }}
@@ -483,10 +466,10 @@ const HireExpert = () => {
                         columnsCountBreakPoints={{ 550: 6, 750: 4, 900: 6 }}
                       >
                         <Masonry columnsCount={6} gutter="10px">
-                          {Data.testingGallery.map((item, i) => (
+                        {data?.tabLogoTesting?.map((item, i) => (
                             <div key={i}>
                               <img
-                                src={item.image}
+                                src={item.tabTestingImages.mediaItemUrl}
                                 key={i}
                                 alt="Icon"
                                 style={{ width: "190px", display: "block" }}
@@ -512,10 +495,10 @@ const HireExpert = () => {
                         columnsCountBreakPoints={{ 550: 6, 750: 4, 900: 6 }}
                       >
                         <Masonry columnsCount={6} gutter="10px">
-                          {Data.mobGallery.map((item, i) => (
+                        {data?.tabLogoApp?.map((item, i) => (
                             <div key={i}>
                               <img
-                                src={item.image}
+                                src={item.tabAppImages.mediaItemUrl}
                                 key={i}
                                 alt="Icon"
                                 style={{ width: "190px", display: "block" }}
@@ -536,23 +519,17 @@ const HireExpert = () => {
             <div className="row align-items-center g-lg-5 py-5">
               <div className="col-md-7 text-lg-start">
                 <h2 className="secondary-title fw-bold lh-1 mb-3 text-white secondary titlesection">
-                  Who Are We?
+                {data?.whoAreTitle}
                 </h2>
                 <p className="mb-4 text-white-secondary custom">
-                  We are programmers who are experts in both legacy and modern
-                  platforms. We extend your existing team so you can accomplish
-                  your goals faster. We offer an industry unique “Don’t pay us
-                  if you are not satisfied” guarantee on our work.
+                {data?.whoAreParagraph}
                 </p>
-                <button
-                  type="button"
-                  className="btn btn-primary me-2 rounded-2 py-2"
-                >
-                  Dedicated Team
-                </button>
+                <a href={data?.whoAreButton} className="btn btn-primary me-2 rounded-2 py-2">Dedicated Team</a>
               </div>
-              <div className="mx-auto col-md-5 ">
-                <ul className="Coexperience list-inline">
+              <div className="mx-auto col-md-5 " dangerouslySetInnerHTML={{ __html: data?.coexperienceListText }}>
+              
+                {/* <ul className="Coexperience list-inline">
+                
                   <li>
                     350+
                     <div>Qualified Experts</div>
@@ -569,7 +546,7 @@ const HireExpert = () => {
                     42%
                     <div>YOY Growth</div>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           </div>
@@ -579,32 +556,34 @@ const HireExpert = () => {
           <div className="companyCards spacers">
             <div className="container">
               <h2 className="secondary-title fw-bold text-center text-white">
-                Let`&apos;s Work Together
+              {data?.companyCardsTitleMain}
               </h2>
               <p className="text-white text-opacity-50 text-center mb-5">
-                We’re passionate about brilliant ideas and the execution that
-                brings it all together in one beautiful experience. If you are
-                too, call or send <br></br>us an email to get started.
+              {data?.companyCardsMainPharagraph}
               </p>
-              <div className="pt-4">
+              <div
+                className="pt-4"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="900"
+              >
                 <div className="row">
-                  <div className="col-lg-4">
-                    <div data-aos="fade-up" data-aos-duration="3000" className="iconWork d-flex">
-                      <div className="me-3">
-                        <i className="fas fa-chalkboard-teacher"></i>
+                {data?.companyCards?.map((item,i)=><div className="col-lg-4" key={i}>
+                    <div className="iconWork d-flex fadeInUp">
+                      <div className="me-3" dangerouslySetInnerHTML={{ __html: item.iconWorkFont }}>
+                        {/* <i className="fas fa-chalkboard-teacher" >{item.iconWorkFont}</i> */}
                       </div>
                       <div>
-                        <h3 className="text-white fw-bold fs-4">WE DISCUSS</h3>
-                        <p className="text-white text-opacity-50">
-                          We’re a full-service digital marketing agency that
-                          hustles hard to makes users happy while infusing
-                          everything we do with the heart.
-                        </p>
+                        <h3 className="text-white fw-bold fs-4">{item.iconsWorkTitle}</h3>
+                        <p className="text-white text-opacity-50">{item.iconsWorkExplan}</p>
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-4">
-                    <div className="iconWork d-flex">
+                )}
+
+                  {/* <div className="col-lg-4">
+                    <div className="iconWork d-flex fadeInUp">
                       <div className="me-3">
                         <i className="fas fa-paper-plane"></i>
                       </div>
@@ -618,7 +597,7 @@ const HireExpert = () => {
                     </div>
                   </div>
                   <div className="col-lg-4">
-                    <div className="iconWork d-flex">
+                    <div className="iconWork d-flex fadeInUp">
                       <div className="me-3">
                         <i className="fas fa-paste"></i>
                       </div>
@@ -631,12 +610,13 @@ const HireExpert = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* <section>
         <div className="backend">
@@ -687,31 +667,27 @@ const HireExpert = () => {
             <div className="container">
               <div className="py-5">
                 <h2 className="secondary-title fw-bold text-center text-white">
-                  Clients’ Experiences
+                  {data?.clientsExperiencesMainTitle}
                 </h2>
                 <p className="text-center text-white">
-                  Our clients return to us, saying we’re high performing,
-                  reliable, helpful, quick and productive.
+                {data?.clientsExperiencesMainPharagraph}
                 </p>
               </div>
               <div className="row">
-                <div className="col-lg-4">
+                {data?.clientsExperiences?.map((item,i)=><div className="col-lg-4" key={i}>
                   <div className="clientsCard bg-white text-center p-4 btn draw-border">
                     <img
-                      src="./images/granicus-logo.png"
+                      src={item.clientPhotoLogo.mediaItemUrl}
                       alt="Icon-5"
                       className="img-fluid pb-2"
                     />
-                    <p>
-                      Programmers.io has been so helpful. We have been using
-                      them for over 18 months and I am constantly looking for
-                      more projects to send them.
-                    </p>
-                    <p>‐ Director, Implementation and Support, Land & Vitals</p>
-                    <p className="text-primary">Granicus</p>
+                    <p>{item.clientExperiseExplan}</p>
+                    <p>{item.clientText}</p>
+                    <p className="text-primary">{item.clientTextName}</p>
                   </div>
                 </div>
-                <div className="col-lg-4">
+                )}
+                {/* <div className="col-lg-4">
                   <div className="clientsCard bg-white text-center p-4 btn draw-border">
                     <img
                       src="./images/wn-logo.png"
@@ -741,7 +717,7 @@ const HireExpert = () => {
                     <p className="pt-4">‐ EDI Manager</p>
                     <p className="text-primary">Saia</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -752,5 +728,112 @@ const HireExpert = () => {
     </div>
   );
 };
+// This function gets called at build time on server-side.
+// It won't be called on client-side, so you can even do
+// direct database queries.
+export async function getStaticProps() {
+  const res = await fetch("http://localhost/pixel-mutation/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      query: `
+        query HirExpertQuery {
+          page(id: "cG9zdDo3") {
+            id
+            hireField {
+              heroPartTitle
+              formBackroundImage {
+                mediaItemUrl
+              }
+              masonryImagesTitle
+              masonryParagraphText
+              masonryImages {
+                cardMasonryImage {
+                  mediaItemUrl
+                }
+              }
+              serviceBlockStartTitle
+              serviceBlockStartParagraph
+              serviceBlock {
+                serviceTitle
+                serviceExplanText
+                iconBox {
+                  mediaItemUrl
+                }
+              }
+              companyCardsTitleMain
+              companyCardsMainPharagraph
+              companyCards {
+                iconWorkFont
+                iconsWorkExplan
+                iconsWorkTitle
+              }
+              clientsExperiencesMainTitle
+              clientsExperiencesMainPharagraph
+              clientsExperiences {
+                clientExperiseExplan
+                clientPhotoLogo {
+                  mediaItemUrl
+                }
+                clientText
+                clientTextName
+              }
+              tabLogoMainTitle
+              tabLogoMainParagraph
+              tabLogoPhoto {
+                tabImageLogos {
+                  mediaItemUrl
+              }
+            }
+            tabLogoBankend {
+              tabBackendImage {
+                mediaItemUrl
+              }
+            }
+            tabLogoDatabase {
+              tabDatabaseImages {
+                mediaItemUrl
+              }
+            }
+            tabLogoCms {
+              tabCmsImages {
+                mediaItemUrl
+              }
+            }
+            tabLogoCloud {
+              tabCloudImages {
+                mediaItemUrl
+              }
+            }
+            tabLogoTesting {
+              tabTestingImages {
+                mediaItemUrl
+              }
+            }
+            tabLogoApp {
+              tabAppImages {
+                mediaItemUrl
+              }
+            }
+            whoAreTitle
+      whoAreParagraph
+      whoAreButton {
+        url
+      }
+      coexperienceListText
+            }
+          }
+        }
+        `,
+    }),
+  });
+
+  const json = await res.json();
+  return {
+    props: {
+      data: json.data.page.hireField,
+    },
+  };
+}
 
 export default HireExpert;

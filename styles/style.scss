@@ -98,6 +98,11 @@ body{
     color: rgba(255, 255, 255, 0.7);
     font-size: 25px;
 }
+// .fadeInUp{animation:fadeInUp 1s ease backwards;}
+// @keyframes fadeInUp{
+//   0%{transform:translate(0px, 100px); opacity: 0;}
+//   100%{transform:translate(0px, 0); opacity: 1;}
+// }
 .text-primary{
     color: $primaryColor !important;
 }
@@ -408,7 +413,9 @@ flex-direction: column;
   }
 
   /* ClientsExperiences border animation css */
-  
+.clientsCard{
+    min-height: 360px;
+}
 .draw-border{
     --uiButtonTextColor: #000;
     --uiButtonBorderWidth: var(--buttonBorderWidth, 4px);
@@ -689,29 +696,43 @@ flex-direction: column;
     align-items: center;
     margin-bottom: 12px;
 }
+// Loading-home-css
+@keyframes load {
+  100% {transform: rotate(360deg);}
+}
+.load1 {
+  width: 100px;
+  height: 100px;
+  border: 10px solid var(--bg-color);
+  border-top: 10px solid #F04037;
+  border-right: 10px solid #F04037;
+  border-radius: 60px;
+  animation: load 1s linear infinite;
+}
+// Loading-home-css
 .services-section {
   position: relative;
   padding: 110px 0px 80px;
-  background: #0f2c36 url(../public/images/pattern-1.png) left top repeat;
+  background-color: #000;
 }
-.service-block {
+.services-block {
   position: relative;
   margin-bottom: 30px;
 }
-.service-block .inner-box:hover .hover-curve {
+.services-block .inner-box-content:hover .hover-effect {
   opacity: 1;
 }
-.service-block .inner-box:hover .hover-curve:before {
+.services-block .inner-box-content:hover .hover-effect:before {
   opacity: 1;
   transform: translate(0% , -20%);
   transition: all 0.6s linear;
 }
-.service-block .inner-box:hover:before {
+.services-block .inner-box-content:hover:before {
   transform: scale(1);
   transition: all 500ms linear;
   transition-delay: 0.1s;
 }
-.service-block .inner-box {
+.services-block .inner-box-content {
   position: relative;
   display: block;
   padding: 70px 20px;
@@ -719,9 +740,8 @@ flex-direction: column;
   text-align: center;
   border: 2px solid;
   overflow: hidden;
-  transition: all 300ms ease;
 }
-.service-block .inner-box:before {
+.services-block .inner-box-content:before {
   content: '';
   width: 100%;
   height: 273px;
@@ -731,9 +751,8 @@ flex-direction: column;
   left: 0px;
   background: rgba(255, 96, 0, 0.2);
   transform: scale(0);
-  transition: all 500ms ease;
 }
-.service-block .hover-curve:before {
+.services-block .hover-effect:before {
   content: '';
   width: 130%;
   height: 250px;
@@ -745,20 +764,19 @@ flex-direction: column;
   z-index: 1;
   transform: translate(0, -50%);
   opacity: 0;
-  transition: all 300ms ease;
 }
-.service-block .inner-box .icon-box img{
+.services-block .inner-box-content .icon-box img{
   width: 80px;
   margin: 20px 0;
 }
-.service-block .count {
+.services-block .count {
   font-weight: 700;
   color: #5a7a85;
   margin-bottom: 12px;
 }
-.service-block .inner-box:hover {
-  border-color: #ffffff;
-}
+// .services-block .inner-box-content:hover {
+//   border-color: #ffffff;
+// }
   
   @media (max-width: 768px) {
     .timeline .timeline-continue::after {
